@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://ddongeee.github.io/2019/08/06/kafka/">
+<meta name="naver-site-verification" content="92fcd64c1794d133f4339ce4c26faa8ba3eb36b9">
+
+<meta name="generator" content="Hexo 4.2.1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Kafka - Crayon&#39;s Blog</title>
+
+
+    <meta name="description" content="정의 링크드인 에서 개발된 ‘분산 메시징 시스템’ 대용량 실시간 로그 처리에 특화되어 있음. TPS 높음  vs 기존 메시징 시스템 TPS 가 보다 뛰어나다. 성능이 아주 좋다. 분산 및 복제 구성을 보다 쉽게 사용할수 있다. TCP 기반의 프로토콜을 사용하여, 프로토콜에 의한 오버헤드가 감소했다. Producer 에서 batch 형태로 Publish 가능">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka">
+<meta property="og:url" content="http://ddongeee.github.io/2019/08/06/kafka/index.html">
+<meta property="og:site_name" content="Crayon&#39;s Blog">
+<meta property="og:description" content="정의 링크드인 에서 개발된 ‘분산 메시징 시스템’ 대용량 실시간 로그 처리에 특화되어 있음. TPS 높음  vs 기존 메시징 시스템 TPS 가 보다 뛰어나다. 성능이 아주 좋다. 분산 및 복제 구성을 보다 쉽게 사용할수 있다. TCP 기반의 프로토콜을 사용하여, 프로토콜에 의한 오버헤드가 감소했다. Producer 에서 batch 형태로 Publish 가능">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://ddongeee.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-08-05T15:07:19.000Z">
+<meta property="article:modified_time" content="2020-06-06T08:36:33.194Z">
+<meta property="article:author" content="Crayon">
+<meta property="article:tag" content="kafka">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ddongeee.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55065107-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55065107-2');
+</script>
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/rss2.xml" title="Crayon's Blog" type="application/rss+xml">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Kafka" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <!--<div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-05T15:07:19.000Z">2019-08-06</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1045 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Kafka
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h1 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h1><ul>
+<li>링크드인 에서 개발된 ‘분산 메시징 시스템’</li>
+<li>대용량 실시간 로그 처리에 특화되어 있음. TPS 높음</li>
+</ul>
+<h1 id="vs-기존-메시징-시스템"><a href="#vs-기존-메시징-시스템" class="headerlink" title="vs 기존 메시징 시스템"></a>vs 기존 메시징 시스템</h1><ul>
+<li>TPS 가 보다 뛰어나다. 성능이 아주 좋다.</li>
+<li>분산 및 복제 구성을 보다 쉽게 사용할수 있다.</li>
+<li>TCP 기반의 프로토콜을 사용하여, 프로토콜에 의한 오버헤드가 감소했다.</li>
+<li>Producer 에서 batch 형태로 Publish 가능하여, TCP/IP 라운드트립 횟수를 줄일수 있다. (좀더 빠르다?!)</li>
+<li>메시지를 메모리가 아닌 <strong>‘파일시스템’</strong>에 저장한다.<ul>
+<li>자동으로 영속성(durability) 보장.</li>
+<li>메시지가 누적되어도 성능 감소 영향 없음.</li>
+<li>실시간 처리 뿐만 아니라, 주기적 batch 작업을 위한 데이터 저장용도로도 사용가능.</li>
+</ul>
+</li>
+<li>Consumer는 pulling 방식으로 동작하여 최고의 퍼포먼스를 발휘할수 있다.</li>
+<li>처리해야 하는 메시지에 대한 메타 정보를 Consumer가  트래킹 하고 있어서, Broker의 관리 부담이 줄어들었다.</li>
+</ul>
+<h1 id="구현기술"><a href="#구현기술" class="headerlink" title="구현기술"></a>구현기술</h1><ul>
+<li>Pub/Sub 모델로 동작하며, Producer, Broker, Consumer로 구성되어 있다.</li>
+<li>Topic 이라는 개념으로 메시지를 관리한다. </li>
+<li>실제 메시지는 Topic을 <strong>‘Partition’</strong>이란 단위로 나눠서 메시지큐에 저장하고 사용된다.<ul>
+<li>Partition 들은 클러스터의 각 노드에 분산 저장된다.</li>
+<li>고가용성을 위한 복제(replication) 설정시에 복제된 Partition 도 분산 저장되며, 장애 발생시 Partition 단위로 Fail over가 수행된다.</li>
+<li>Partition 에선 Message 에게 Offset 이라는 unique 한 ID를 부여하고, 이를 식별자로 사용한다.<ul>
+<li>Offset은 Partition 마다 관리됨으로, 특정 메시지를 찾을땐, <strong>‘partition 번호 + offset 값’</strong> 으로 찾아야 한다.</li>
+</ul>
+</li>
+<li>Topic으로 들어온 메시지는 기본적으로 라운드로빈 방식으로 Partition에 분배된다.</li>
+<li>Replication factor 값 설정을 통해 복제 설정을 할수 있다. <ul>
+<li>ex) replication factor 3으로 설정시, 똑같은 파티션이 3개의 노드에 존재하게 된다.</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>확장성(scale-out)과 고가용성(High availability)을 위해 Broker들이 클러스터로 동작한다.<ul>
+<li>사실은 Zookeeper 가 클러스터 관리한다?!</li>
+</ul>
+</li>
+<li></li>
+<li>커밋과 오프셋<ul>
+<li>자동커밋과 수동커밋</li>
+</ul>
+</li>
+</ul>
+<h1 id="주요개념"><a href="#주요개념" class="headerlink" title="주요개념"></a>주요개념</h1><h1 id="순서"><a href="#순서" class="headerlink" title="순서"></a>순서</h1><h1 id="사용"><a href="#사용" class="headerlink" title="사용"></a>사용</h1><h1 id="Kafka-cli-사용"><a href="#Kafka-cli-사용" class="headerlink" title="Kafka cli 사용"></a>Kafka cli 사용</h1><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 선행조건</span></span><br><span class="line"><span class="hljs-comment"># 1. https://kafka.apache.org/downloads 에서 카프카 다운로드</span></span><br><span class="line"><span class="hljs-comment"># 2. 압축해제후 해당 디렉토리를 .bashrc 혹은 .zshrc에 전역 변수로 등록</span></span><br><span class="line"><span class="hljs-comment"># 	ex) export KAFKA_HOME=~/Development/supports/kafka_2.11-2.0.0</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Zookeeper for Kafka</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/zookeeper-server-start.sh <span class="hljs-variable">$KAFKA_HOME</span>/config/zookeeper.properties</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Kafka Server</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-server-start.sh <span class="hljs-variable">$KAFKA_HOME</span>/config/server.properties</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Create Kafka Topic</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --create \</span><br><span class="line">  --zookeeper localhost:2181 \</span><br><span class="line">  --replication-factor 1 --partitions 13 \</span><br><span class="line">  --topic my-topic</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># List Topics</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --list \</span><br><span class="line">    --zookeeper localhost:2181</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment"># Run Kafka Producer Console</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-console-producer.sh \</span><br><span class="line">    --broker-list localhost:9092 \</span><br><span class="line">    --topic my-topic</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Kafka Consumer Console</span></span><br><span class="line"><span class="hljs-comment"># Order is only guaranteed within a partition.</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-console-consumer.sh \</span><br><span class="line">    --bootstrap-server localhost:9092 \</span><br><span class="line">    --topic my-topic \</span><br><span class="line">    --from-beginning</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Consumer with consumer group id</span></span><br><span class="line">kafka/bin/kafka-console-consumer.sh \</span><br><span class="line">    --bootstrap-server localhost:9092 \</span><br><span class="line">    --topic my-topic \</span><br><span class="line">    --consumer-property group.id=mygroup</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment"># Topology of Kafka Topic Partition Ownership  </span></span><br><span class="line"><span class="hljs-comment"># to see how the Kafka topic is laid out among the Kafka brokers. </span></span><br><span class="line"><span class="hljs-comment"># The ---describe will show partitions, ISRs:in-sync replicas, and broker partition leadership.)</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --describe \</span><br><span class="line">    --topic ap.pushtriggerevent.1 \</span><br><span class="line">    --zookeeper localhost:2181</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>Computing architecture trend</p>
+<p>Loosely coupled computing architecture(Not strongly coupled)</p>
+<p>Not persistent every thing, Can be auto-scale in/out</p>
+<p>So result, Asynchronous Messaging freamwork. like kafka, akka</p>
+<p>Reference</p>
+<ul>
+<li><a href="http://cloudurable.com/blog/kafka-tutorial-kafka-from-command-line/index.html" target="_blank" rel="external nofollow noopener noreferrer">http://cloudurable.com/blog/kafka-tutorial-kafka-from-command-line/index.html</a></li>
+<li><a href="https://epicdevs.com/17" target="_blank" rel="external nofollow noopener noreferrer">https://epicdevs.com/17</a></li>
+<li><a href="https://taetaetae.github.io/2017/11/02/what-is-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://taetaetae.github.io/2017/11/02/what-is-kafka/</a></li>
+<li><a href="https://getto215.github.io/kafka-architecture-2/" target="_blank" rel="external nofollow noopener noreferrer">https://getto215.github.io/kafka-architecture-2/</a></li>
+<li><a href="https://medium.com/@umanking/카프카에-대해서-이야기-하기전에-먼저-data에-대해서-이야기해보자-d2e3ca2f3c2" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@umanking/%EC%B9%B4%ED%94%84%EC%B9%B4%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-%ED%95%98%EA%B8%B0%EC%A0%84%EC%97%90-%EB%A8%BC%EC%A0%80-data%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EB%B3%B4%EC%9E%90-d2e3ca2f3c2</a></li>
+<li><a href="https://www.popit.kr/kafka-운영자가-말하는-처음-접하는-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka/</a></li>
+<li><a href="https://coding-start.tistory.com/133" target="_blank" rel="external nofollow noopener noreferrer">https://coding-start.tistory.com/133</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/kafka/" rel="tag">kafka</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/25/docker/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Docker</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/11/python-infra/">
+                <span class="level-item">Python&#39;s infra</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://ddongeee.github.io/2019/08/06/kafka/';
+        this.page.identifier = '2019/08/06/kafka/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'Crayon' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>-->
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-05T15:07:19.000Z">2019-08-06</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1045 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Kafka
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h1 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h1><ul>
+<li>링크드인 에서 개발된 ‘분산 메시징 시스템’</li>
+<li>대용량 실시간 로그 처리에 특화되어 있음. TPS 높음</li>
+</ul>
+<h1 id="vs-기존-메시징-시스템"><a href="#vs-기존-메시징-시스템" class="headerlink" title="vs 기존 메시징 시스템"></a>vs 기존 메시징 시스템</h1><ul>
+<li>TPS 가 보다 뛰어나다. 성능이 아주 좋다.</li>
+<li>분산 및 복제 구성을 보다 쉽게 사용할수 있다.</li>
+<li>TCP 기반의 프로토콜을 사용하여, 프로토콜에 의한 오버헤드가 감소했다.</li>
+<li>Producer 에서 batch 형태로 Publish 가능하여, TCP/IP 라운드트립 횟수를 줄일수 있다. (좀더 빠르다?!)</li>
+<li>메시지를 메모리가 아닌 <strong>‘파일시스템’</strong>에 저장한다.<ul>
+<li>자동으로 영속성(durability) 보장.</li>
+<li>메시지가 누적되어도 성능 감소 영향 없음.</li>
+<li>실시간 처리 뿐만 아니라, 주기적 batch 작업을 위한 데이터 저장용도로도 사용가능.</li>
+</ul>
+</li>
+<li>Consumer는 pulling 방식으로 동작하여 최고의 퍼포먼스를 발휘할수 있다.</li>
+<li>처리해야 하는 메시지에 대한 메타 정보를 Consumer가  트래킹 하고 있어서, Broker의 관리 부담이 줄어들었다.</li>
+</ul>
+<h1 id="구현기술"><a href="#구현기술" class="headerlink" title="구현기술"></a>구현기술</h1><ul>
+<li>Pub/Sub 모델로 동작하며, Producer, Broker, Consumer로 구성되어 있다.</li>
+<li>Topic 이라는 개념으로 메시지를 관리한다. </li>
+<li>실제 메시지는 Topic을 <strong>‘Partition’</strong>이란 단위로 나눠서 메시지큐에 저장하고 사용된다.<ul>
+<li>Partition 들은 클러스터의 각 노드에 분산 저장된다.</li>
+<li>고가용성을 위한 복제(replication) 설정시에 복제된 Partition 도 분산 저장되며, 장애 발생시 Partition 단위로 Fail over가 수행된다.</li>
+<li>Partition 에선 Message 에게 Offset 이라는 unique 한 ID를 부여하고, 이를 식별자로 사용한다.<ul>
+<li>Offset은 Partition 마다 관리됨으로, 특정 메시지를 찾을땐, <strong>‘partition 번호 + offset 값’</strong> 으로 찾아야 한다.</li>
+</ul>
+</li>
+<li>Topic으로 들어온 메시지는 기본적으로 라운드로빈 방식으로 Partition에 분배된다.</li>
+<li>Replication factor 값 설정을 통해 복제 설정을 할수 있다. <ul>
+<li>ex) replication factor 3으로 설정시, 똑같은 파티션이 3개의 노드에 존재하게 된다.</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>확장성(scale-out)과 고가용성(High availability)을 위해 Broker들이 클러스터로 동작한다.<ul>
+<li>사실은 Zookeeper 가 클러스터 관리한다?!</li>
+</ul>
+</li>
+<li></li>
+<li>커밋과 오프셋<ul>
+<li>자동커밋과 수동커밋</li>
+</ul>
+</li>
+</ul>
+<h1 id="주요개념"><a href="#주요개념" class="headerlink" title="주요개념"></a>주요개념</h1><h1 id="순서"><a href="#순서" class="headerlink" title="순서"></a>순서</h1><h1 id="사용"><a href="#사용" class="headerlink" title="사용"></a>사용</h1><h1 id="Kafka-cli-사용"><a href="#Kafka-cli-사용" class="headerlink" title="Kafka cli 사용"></a>Kafka cli 사용</h1><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 선행조건</span></span><br><span class="line"><span class="hljs-comment"># 1. https://kafka.apache.org/downloads 에서 카프카 다운로드</span></span><br><span class="line"><span class="hljs-comment"># 2. 압축해제후 해당 디렉토리를 .bashrc 혹은 .zshrc에 전역 변수로 등록</span></span><br><span class="line"><span class="hljs-comment"># 	ex) export KAFKA_HOME=~/Development/supports/kafka_2.11-2.0.0</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Zookeeper for Kafka</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/zookeeper-server-start.sh <span class="hljs-variable">$KAFKA_HOME</span>/config/zookeeper.properties</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Kafka Server</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-server-start.sh <span class="hljs-variable">$KAFKA_HOME</span>/config/server.properties</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Create Kafka Topic</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --create \</span><br><span class="line">  --zookeeper localhost:2181 \</span><br><span class="line">  --replication-factor 1 --partitions 13 \</span><br><span class="line">  --topic my-topic</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># List Topics</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --list \</span><br><span class="line">    --zookeeper localhost:2181</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment"># Run Kafka Producer Console</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-console-producer.sh \</span><br><span class="line">    --broker-list localhost:9092 \</span><br><span class="line">    --topic my-topic</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Kafka Consumer Console</span></span><br><span class="line"><span class="hljs-comment"># Order is only guaranteed within a partition.</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-console-consumer.sh \</span><br><span class="line">    --bootstrap-server localhost:9092 \</span><br><span class="line">    --topic my-topic \</span><br><span class="line">    --from-beginning</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Run Consumer with consumer group id</span></span><br><span class="line">kafka/bin/kafka-console-consumer.sh \</span><br><span class="line">    --bootstrap-server localhost:9092 \</span><br><span class="line">    --topic my-topic \</span><br><span class="line">    --consumer-property group.id=mygroup</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment"># Topology of Kafka Topic Partition Ownership  </span></span><br><span class="line"><span class="hljs-comment"># to see how the Kafka topic is laid out among the Kafka brokers. </span></span><br><span class="line"><span class="hljs-comment"># The ---describe will show partitions, ISRs:in-sync replicas, and broker partition leadership.)</span></span><br><span class="line"><span class="hljs-variable">$KAFKA_HOME</span>/bin/kafka-topics.sh --describe \</span><br><span class="line">    --topic ap.pushtriggerevent.1 \</span><br><span class="line">    --zookeeper localhost:2181</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>Computing architecture trend</p>
+<p>Loosely coupled computing architecture(Not strongly coupled)</p>
+<p>Not persistent every thing, Can be auto-scale in/out</p>
+<p>So result, Asynchronous Messaging freamwork. like kafka, akka</p>
+<p>Reference</p>
+<ul>
+<li><a href="http://cloudurable.com/blog/kafka-tutorial-kafka-from-command-line/index.html" target="_blank" rel="external nofollow noopener noreferrer">http://cloudurable.com/blog/kafka-tutorial-kafka-from-command-line/index.html</a></li>
+<li><a href="https://epicdevs.com/17" target="_blank" rel="external nofollow noopener noreferrer">https://epicdevs.com/17</a></li>
+<li><a href="https://taetaetae.github.io/2017/11/02/what-is-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://taetaetae.github.io/2017/11/02/what-is-kafka/</a></li>
+<li><a href="https://getto215.github.io/kafka-architecture-2/" target="_blank" rel="external nofollow noopener noreferrer">https://getto215.github.io/kafka-architecture-2/</a></li>
+<li><a href="https://medium.com/@umanking/카프카에-대해서-이야기-하기전에-먼저-data에-대해서-이야기해보자-d2e3ca2f3c2" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@umanking/%EC%B9%B4%ED%94%84%EC%B9%B4%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-%ED%95%98%EA%B8%B0%EC%A0%84%EC%97%90-%EB%A8%BC%EC%A0%80-data%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EB%B3%B4%EC%9E%90-d2e3ca2f3c2</a></li>
+<li><a href="https://www.popit.kr/kafka-운영자가-말하는-처음-접하는-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka/</a></li>
+<li><a href="https://coding-start.tistory.com/133" target="_blank" rel="external nofollow noopener noreferrer">https://coding-start.tistory.com/133</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/kafka/" rel="tag">kafka</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/25/docker/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Docker</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/11/python-infra/">
+                <span class="level-item">Python&#39;s infra</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://ddongeee.github.io/2019/08/06/kafka/';
+        this.page.identifier = '2019/08/06/kafka/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'Crayon' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+
+
+    
+
+
+
+                
+
+
+
+
+
+
+    
+        <div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+            
+                
+                    
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    Catalogue
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#정의">
+        <span class="has-mr-6">1</span>
+        <span>정의</span>
+        </a></li><li>
+        <a class="is-flex" href="#vs-기존-메시징-시스템">
+        <span class="has-mr-6">2</span>
+        <span>vs 기존 메시징 시스템</span>
+        </a></li><li>
+        <a class="is-flex" href="#구현기술">
+        <span class="has-mr-6">3</span>
+        <span>구현기술</span>
+        </a></li><li>
+        <a class="is-flex" href="#주요개념">
+        <span class="has-mr-6">4</span>
+        <span>주요개념</span>
+        </a></li><li>
+        <a class="is-flex" href="#순서">
+        <span class="has-mr-6">5</span>
+        <span>순서</span>
+        </a></li><li>
+        <a class="is-flex" href="#사용">
+        <span class="has-mr-6">6</span>
+        <span>사용</span>
+        </a></li><li>
+        <a class="is-flex" href="#Kafka-cli-사용">
+        <span class="has-mr-6">7</span>
+        <span>Kafka cli 사용</span>
+        </a></li><li>
+        <a class="is-flex" href="#정리">
+        <span class="has-mr-6">8</span>
+        <span>정리</span>
+        </a></li></ul>
+            </div>
+        </div>
+    </div>
+
+                
+            
+        </div>
+    
+
+
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Kafka" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Crayon&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: false,
+            fold: ''
+        }
+    }
+};
+</script>
+
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="external nofollow noopener noreferrer">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

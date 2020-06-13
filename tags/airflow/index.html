@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://ddongeee.github.io/tags/airflow/">
+<meta name="naver-site-verification" content="92fcd64c1794d133f4339ce4c26faa8ba3eb36b9">
+
+<meta name="generator" content="Hexo 4.2.1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Tag: airflow - Crayon&#39;s Blog</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Crayon&#39;s Blog">
+<meta property="og:url" content="http://ddongeee.github.io/tags/airflow/index.html">
+<meta property="og:site_name" content="Crayon&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://ddongeee.github.io/images/og_image.png">
+<meta property="article:author" content="Crayon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ddongeee.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55065107-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55065107-2');
+</script>
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/rss2.xml" title="Crayon's Blog" type="application/rss+xml">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Crayon&#39;s Blog" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <!--<div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">airflow</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-01T01:00:00.000Z">2019-07-01</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 minutes read (About 2151 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/01/apache-airflow/">Apache Airflow</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h3 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h3><ul>
+<li><strong>Airflow</strong> is a platform to programmaticaly author, schedule and monitor workflows or data pipelines<ul>
+<li><strong>Workflow</strong> is<ul>
+<li>a sequence of tasks</li>
+<li>started on a schedule or triggered by an event</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A traditional ETL <ul>
+<li>Approach<ul>
+<li>Writing a script to pull data from database and send it to HDFS to process.</li>
+<li>Schedule the script as a cronjob.</li>
+</ul>
+</li>
+<li>Problem<ul>
+<li>Failures<ul>
+<li>retry if failure happens (how many times? how often?)</li>
+</ul>
+</li>
+<li>Monitoring<ul>
+<li>success or failure status, how log does the process runs?</li>
+</ul>
+</li>
+<li>Dependencies<ul>
+<li>Data dependencies : upstream data is missing.</li>
+<li>Execution dependencies : job 2 runs after job 1 is finished.</li>
+</ul>
+</li>
+<li>Scalability<ul>
+<li>there is no centralized scheduler between different cron machines.</li>
+</ul>
+</li>
+<li>Deployment<ul>
+<li>deploy new changes constantly</li>
+</ul>
+</li>
+<li>Process historic data<ul>
+<li>backfill/rerun historical data</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A workflow (data-pipeline) management system developed by Airbnb<ul>
+<li>A framework to define tasks & dependencies in python</li>
+<li>Executing, scheduling, distributing tasks accross worker nodes.</li>
+<li>View of present and past runs, logging feature</li>
+<li>Extensible through plugins</li>
+<li>Nice UI, possibility to define REST interface</li>
+<li>Interact well with database</li>
+</ul>
+</li>
+<li>Airflow DAG<ul>
+<li>A workflow as a Directed Acyclic Graph (DAG) with multiple tasks which can be executed independently</li>
+<li>Airflow DAGs are composed of Tasks</li>
+</ul>
+</li>
+<li>What makes Airflow great?<ul>
+<li>Can handle upstream/downstream dependencies gracefully (Example : upstream missing tables)</li>
+<li>Easy to reprocess historical jobs by date, or re-run for specific intervals</li>
+<li>Jobs can pass parameters to other jobs downstream</li>
+<li>Handle errors and failures gracefully. Automatically retry when a task fails.</li>
+<li>Ease of deployment of workflow changes (continuous integration)</li>
+<li>Integrations with a log of infrastructure (Hive, Presto, Druid, AWS, Google cloud, etc)</li>
+<li>Data sensors to trigger a DAG when data arrives</li>
+<li>Job testing through airflow itself</li>
+<li>Accessibility of log files and other meta-data through the web GUI</li>
+<li>Implement trigger rules for tasks</li>
+<li>Monitoring all jobs status in real time + Email alerts</li>
+<li>Community support</li>
+</ul>
+</li>
+<li>Airflow applications<ul>
+<li>Data warehousing : cleanse, organize, data quality check, and publish/stream data into our growing data warehouse</li>
+<li>Machine Learning : automate machine learning workflows</li>
+<li>Growth analytics : compute metrics around guest and host engagement  as well as growth accounting</li>
+<li>Experimentation : compute A/B testing experimentation frameworks logic and aggregates</li>
+<li>Email targeting : apply rules to target and engage users through email campaigns</li>
+<li>Sessionization : compute clickstream and time spent datasets</li>
+<li>Search: compute search ranking related metrics</li>
+<li>Data infrastructure maintenance : database scrapes, floder cleanup, applying data retention policies, …</li>
+</ul>
+</li>
+</ul>
+<p>Running Airflow using Docker</p>
+<ul>
+<li>What is Docker ?<ul>
+<li>Docker is an open platform for developing, shipping, and running applications</li>
+<li>Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host, regardless of its operating system: Mac, Windows, PC, cloud, data center, …</li>
+<li>Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines.</li>
+</ul>
+</li>
+<li>Benefits of using Docker<ul>
+<li>Docker is freeing us from the task of manaing, maintening all of the Airflow dependencies, and deployment.</li>
+<li>Easy to share and deploy different versions and environments.</li>
+<li>Keep track through Github tags and releases.</li>
+<li>Ease of deployment from testing to production environment.</li>
+</ul>
+</li>
+<li>Best tutorial<ul>
+<li><a href="https://github.com/tuanavu/airflow-tutorial" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/tuanavu/airflow-tutorial</a></li>
+</ul>
+</li>
+</ul>
+<p>Writing your first workflow</p>
+<p>Steps to write an Airflow DAG</p>
+<ul>
+<li>A DAG file, which is basically just a Python script, is a configuration file specifying the DAG’s structure as code.</li>
+<li>There are only 5 steps you need to remember to write an Airflow DAG or workflow<ul>
+<li>Step 1 : Importing modules</li>
+<li>Step 2 : Define default Arguments</li>
+<li>Step 3 : Instanticate a DAG</li>
+<li>Step 4 : Tasks</li>
+<li>Step 5 : Setting up Dependencies<ul>
+<li>Set the dependencies or the order in which the tasks should be executed in.</li>
+<li>Here’s a few ways you can define dependencies between them:<ul>
+<li>downstream example : t1 >> t2 </li>
+<li>list of tasks can also be set as : t1 >> [t2, t3]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Recap</p>
+<ul>
+<li>Basically a DAG is just a Python file, which is used to organize tasks and set their execution context. DAGs do not perform any actual computation.</li>
+<li>Instead, tasks are the elements of Airflow that actually “do the work” we want performed. And it is your job to write the configuration and orgaize the tasks in specific orders to create a complete data pipeline.</li>
+</ul>
+<p>Airflow concept</p>
+<ul>
+<li>We will learn about Airflow’s key concept</li>
+</ul>
+<p>Overview </p>
+<ul>
+<li>Airflow is a workflow management system which is used to programmatically author, schedule and monitor workflows</li>
+</ul>
+<p>DAGs</p>
+<ul>
+<li>Workflows are called DAGs (Directed Acyclic Graph).</li>
+<li>A DAG is a collection of alll the tasks you want to run, organized in a way that reflects their relationships and dependencies.</li>
+</ul>
+<p>Understand Directed Acyclic Graph</p>
+<ul>
+<li><p>To understand what is a Directed Acyclic Graph? First, we need to understand the graph data structure. This is a very special data structure in computer science.</p>
+<ul>
+<li>A Graph has 2 main parts:<ul>
+<li>The vertices (nodes) where the data is stored</li>
+<li>The edges (connections) which connect the nodes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Graphs are used to solve many real-life problems because they are used to represent networks.</p>
+<ul>
+<li>For example: social networks, system of roads, airline flights from city to city, how the Internet is conneted, etc</li>
+</ul>
+</li>
+<li><p>To represent direction in a graph</p>
+<ul>
+<li>Undirected graph: The relationship exists in both directions, the edge has no direction. <ul>
+<li>Example : If Mary was a friend of Francis, Francis would likewise be a friend of Mary.</li>
+</ul>
+</li>
+<li>Directed graph (digraph): Direction matters, since the edges in a graph are all one-way<ul>
+<li>An example graph: the course requirements for a computer science major.</li>
+<li>The class prerequisites graph is clearly a digraph since you must take some classes before others.</li>
+</ul>
+</li>
+<li>Acyclic graph: a graph has no cycles.</li>
+<li>Cyclic graph: a graph has cycles.<ul>
+<li>A cycle in a directed graph is a path that starts and ends at the same node. It has loop.</li>
+</ul>
+</li>
+<li>DAGs Summary <ul>
+<li><strong>Directed Acyclic Graph</strong> is a graph that has <strong>no cycles</strong> and data in each node flows forward in only <strong>one direction</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>It is useful to represent a complex data flows using a graph.</p>
+<ul>
+<li>Each node in the graph is a task</li>
+<li>The edges represent dependencies amongst tasks.</li>
+<li>These graphs are called computation graphs or data flow graphs and it transform the data as it flow through the graph and enable very complex numberic computations.</li>
+<li>Given that data only needs to be computed once on a given task and the computation then carries forward, the graph is directed and acyclic. This is why Airflow jobs are commonly referred to as “DAGs” (Directed Acyclic Graphs)</li>
+</ul>
+</li>
+<li><p>Beside Airflow, there are other cutting edge big data/data science frameworks is bulit using graph data structure.</p>
+</li>
+<li><p>Tensorflow - An open source machine learning framework</p>
+<ul>
+<li>TensorFlow uses a dataflow graphe to represent your computation in terms of the dependencies between individual operations.</li>
+</ul>
+</li>
+</ul>
+<p>Operators, and Tasks</p>
+<ul>
+<li>DAGs do not perform any actual computation. Instead, Operators determine what actually gets done.</li>
+<li>Task: once an operator is instantiated, it is referred to as a “task”. An operator describes a single task in a workflow.<ul>
+<li>Instantiating a task requires providing a unique task_id and DAG container</li>
+</ul>
+</li>
+<li>A DAG is a container that is used to organize tasks and set their execution context.</li>
+</ul>
+<p>Operators categories</p>
+<ul>
+<li>Typically, Operators are classified inot three categories:<ul>
+<li>Sensors<ul>
+<li>a certain type of operator that will keep running until a certain critera is met. Example include waiting for a certain time, external file, or upstream data source.<ul>
+<li>HdfsSensor: Waits for a file or floder to ladn in HDFS</li>
+<li>NamedHivePartitionSensor: check whether the most recent partition of a Hive table is available for downstream processing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Operators<ul>
+<li>triggers a certain action (e.g. run a bash command, execute a python funtion, or exxecute a Hive query, etc)<ul>
+<li>BashOperator: executes a bash command</li>
+<li>PythonOperator: calls an arbitrary Python function</li>
+<li>HiveOpertor: executes hql code or hive script in a specific Hive databases.</li>
+<li>BigQueryOperator: executes Google BigQuery SQL queries in a specific BigQuery database</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Transfers<ul>
+<li>moves data from one location to another.<ul>
+<li>MySqlToHiveTransfer: Moves data from MySql to Hive</li>
+<li>S3toRedshiftTransfer: load files from s3 to Redshift</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Working with Operators</p>
+<ul>
+<li>Airflow provides prebuilt operators for many common tasks.</li>
+<li>There are more operators being added by the community. You can just go to the Airflow official Github repo, specifically in the airflow / contrib / directory to look for the community added operators</li>
+<li>All operators are derived from BaseOperator and acquire much functionality throgh inheritance. Contributors can extend BaseOperator class to create custom operators as they see fit. </li>
+<li>Go to Github : apache / incubator-airflow / airflow / contrib / operators</li>
+</ul>
+<p>Defining Task Dependencies</p>
+<ul>
+<li>After defining a DAG, and instantiate all the tasks, you can then set the dependencies or the order in which the tasks should be executed in. </li>
+<li>Task dependencies are set using:<ul>
+<li>the set_upstream and set_downstream operators.</li>
+<li>the bitshift operators << and >></li>
+</ul>
+</li>
+</ul>
+<p>DagRuns and TaskInstances</p>
+<ul>
+<li>A key concept in Airflow is the excution_time. The execution times begin at the DAG’s start_date and repeat every schedule_interval.</li>
+<li>For this example the scheduled executin times would be (‘2018-12-01 00:00:00’, ‘2018-12-02 00:00:00’,…). For each execution_time, a DagRun is created an operates under the context of that execution time. A DagRun is simply a DAG that has a specific execution time.</li>
+<li>DagRuns are DAGs that runs at a certain time.</li>
+<li>TaskInstances are the task belongs to that DagRuns.<ul>
+<li>Each DagRun and TaskInstance is associated with an entry in Airflow’s metadata database that logs their state (e.g. “queued”, “running”, “failed”, “skipped”, “up for retry”).</li>
+</ul>
+</li>
+<li>You can check the concept on UI DAG Graph View and UI DAG Tree View<ul>
+<li>What each of the circle is a DagRun at a certain time and a little square boxes are all the test instances belong to that DagRuns </li>
+</ul>
+</li>
+</ul>
+<p>Airflow variables</p>
+<ul>
+<li></li>
+</ul>
+<ul>
+<li>작업의 흐름을 실행, 관리하는 오픈소스 플랫폼</li>
+<li>데이터 처리 파이프라인을 조율 하여, 데이터 중심 워크플로우를 구성할수 있다.</li>
+<li>워크플로우를 하나의 DAG로 정의<ul>
+<li>하나의 DAG는 한개 이상의 작업들(tasks)로 이뤄진다.</li>
+<li>작업간의 의존성 혹은 전후 관계가 생긴다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="vs-타-흐름-관리-도구-like-oozie"><a href="#vs-타-흐름-관리-도구-like-oozie" class="headerlink" title="vs 타 흐름 관리 도구 (like oozie)"></a>vs 타 흐름 관리 도구 (like oozie)</h3><ul>
+<li>flow 정의 : 파이썬 코드로 정의</li>
+<li>확장성 : 새로운 연산자와 실행자를 쉽게 정의, 라이브러리를 확장할수 있다.</li>
+<li>간결성 : Jinja 템플릿 엔진을 통해 깔끔하게 스크립트 매개 변수를 전달</li>
+<li>가용성 : 모듈 아키텍쳐를 가지며, 클러스터로 확장 가능한 메시지 큐를 통해 작업을 관리.</li>
+<li>직관적이고 다양한 기능의 UI</li>
+<li>적은 관리비용</li>
+</ul>
+<h3 id="개념"><a href="#개념" class="headerlink" title="개념"></a>개념</h3><ul>
+<li>작업(task)과 연산자(operator) 를 이용한다.</li>
+<li>DAG(Directed Acyclec Graph; 방향성 비순환 그래프)로 표현된다.<ul>
+<li>각 노드는 task, 방향성을 갖는 링크는 작업순서를 표현</li>
+<li>DagRun 이란 어떤시점에 실행된 DAG를 의미, 인스턴스 정로로 이해?!</li>
+</ul>
+</li>
+<li>기본적으로 제공하는 연산자는 아래와 같다.<ul>
+<li>BashOperator : Bash 실행</li>
+<li>PythonOperator : Python 함수 실행</li>
+<li>EmailOperator : 이메일 전송</li>
+<li>HTTPOperator : HTTP 요청 전송</li>
+<li>MySqlOperator, SqliteOperator, PostgresOperator, MsSqlOperator, OracleOperator, JdbcOperator: SQL 명령 실행</li>
+<li>Sensor : 특정시간, 파일, DB 레코드, S3 키 등을 기다림</li>
+</ul>
+</li>
+<li>파라미터 값이 적용된 연산자의 오브젝트를 task라 부른다.</li>
+</ul>
+<h3 id="용어"><a href="#용어" class="headerlink" title="용어"></a>용어</h3><ul>
+<li>Airflow DAG는 태스크로 구성된다.</li>
+<li>각 태스크는 오퍼레이터 클래스를 인스턴스화하여 만든다.</li>
+<li>DAG가 시작되면 Airflow 데이터베이스에 DagRun 항목을 만든다.</li>
+<li>특정 DagRun 맥락에서 태스크를 실행하면 태스크 인스턴스가 만들어진다.</li>
+<li>AIRFLOW_HOME은 DAG 정의 파일과 Airflow 플러그인을 저장하는 디렉터리이다.</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
+<li><a href="https://jwon.org/airflow-concepts/" target="_blank" rel="external nofollow noopener noreferrer">https://jwon.org/airflow-concepts/</a></li>
+<li><a href="https://aldente0630.github.io/data-engineering/2018/06/17/developing-workflows-with-apache-airflow.html" target="_blank" rel="external nofollow noopener noreferrer">https://aldente0630.github.io/data-engineering/2018/06/17/developing-workflows-with-apache-airflow.html</a></li>
+<li><a href="https://graspthegist.com/post/learn-airflow-part-0/" target="_blank" rel="external nofollow noopener noreferrer">https://graspthegist.com/post/learn-airflow-part-0/</a></li>
+<li><a href="https://graspthegist.com/post/learn-airflow-part-1-2/" target="_blank" rel="external nofollow noopener noreferrer">https://graspthegist.com/post/learn-airflow-part-1-2/</a></li>
+<li><a href="https://www.youtube.com/watch?v=AHMm1wfGuHE" target="_blank" rel="external nofollow noopener noreferrer">https://www.youtube.com/watch?v=AHMm1wfGuHE</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>-->
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">airflow</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-01T01:00:00.000Z">2019-07-01</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 minutes read (About 2151 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/01/apache-airflow/">Apache Airflow</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h3 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h3><ul>
+<li><strong>Airflow</strong> is a platform to programmaticaly author, schedule and monitor workflows or data pipelines<ul>
+<li><strong>Workflow</strong> is<ul>
+<li>a sequence of tasks</li>
+<li>started on a schedule or triggered by an event</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A traditional ETL <ul>
+<li>Approach<ul>
+<li>Writing a script to pull data from database and send it to HDFS to process.</li>
+<li>Schedule the script as a cronjob.</li>
+</ul>
+</li>
+<li>Problem<ul>
+<li>Failures<ul>
+<li>retry if failure happens (how many times? how often?)</li>
+</ul>
+</li>
+<li>Monitoring<ul>
+<li>success or failure status, how log does the process runs?</li>
+</ul>
+</li>
+<li>Dependencies<ul>
+<li>Data dependencies : upstream data is missing.</li>
+<li>Execution dependencies : job 2 runs after job 1 is finished.</li>
+</ul>
+</li>
+<li>Scalability<ul>
+<li>there is no centralized scheduler between different cron machines.</li>
+</ul>
+</li>
+<li>Deployment<ul>
+<li>deploy new changes constantly</li>
+</ul>
+</li>
+<li>Process historic data<ul>
+<li>backfill/rerun historical data</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A workflow (data-pipeline) management system developed by Airbnb<ul>
+<li>A framework to define tasks & dependencies in python</li>
+<li>Executing, scheduling, distributing tasks accross worker nodes.</li>
+<li>View of present and past runs, logging feature</li>
+<li>Extensible through plugins</li>
+<li>Nice UI, possibility to define REST interface</li>
+<li>Interact well with database</li>
+</ul>
+</li>
+<li>Airflow DAG<ul>
+<li>A workflow as a Directed Acyclic Graph (DAG) with multiple tasks which can be executed independently</li>
+<li>Airflow DAGs are composed of Tasks</li>
+</ul>
+</li>
+<li>What makes Airflow great?<ul>
+<li>Can handle upstream/downstream dependencies gracefully (Example : upstream missing tables)</li>
+<li>Easy to reprocess historical jobs by date, or re-run for specific intervals</li>
+<li>Jobs can pass parameters to other jobs downstream</li>
+<li>Handle errors and failures gracefully. Automatically retry when a task fails.</li>
+<li>Ease of deployment of workflow changes (continuous integration)</li>
+<li>Integrations with a log of infrastructure (Hive, Presto, Druid, AWS, Google cloud, etc)</li>
+<li>Data sensors to trigger a DAG when data arrives</li>
+<li>Job testing through airflow itself</li>
+<li>Accessibility of log files and other meta-data through the web GUI</li>
+<li>Implement trigger rules for tasks</li>
+<li>Monitoring all jobs status in real time + Email alerts</li>
+<li>Community support</li>
+</ul>
+</li>
+<li>Airflow applications<ul>
+<li>Data warehousing : cleanse, organize, data quality check, and publish/stream data into our growing data warehouse</li>
+<li>Machine Learning : automate machine learning workflows</li>
+<li>Growth analytics : compute metrics around guest and host engagement  as well as growth accounting</li>
+<li>Experimentation : compute A/B testing experimentation frameworks logic and aggregates</li>
+<li>Email targeting : apply rules to target and engage users through email campaigns</li>
+<li>Sessionization : compute clickstream and time spent datasets</li>
+<li>Search: compute search ranking related metrics</li>
+<li>Data infrastructure maintenance : database scrapes, floder cleanup, applying data retention policies, …</li>
+</ul>
+</li>
+</ul>
+<p>Running Airflow using Docker</p>
+<ul>
+<li>What is Docker ?<ul>
+<li>Docker is an open platform for developing, shipping, and running applications</li>
+<li>Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host, regardless of its operating system: Mac, Windows, PC, cloud, data center, …</li>
+<li>Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines.</li>
+</ul>
+</li>
+<li>Benefits of using Docker<ul>
+<li>Docker is freeing us from the task of manaing, maintening all of the Airflow dependencies, and deployment.</li>
+<li>Easy to share and deploy different versions and environments.</li>
+<li>Keep track through Github tags and releases.</li>
+<li>Ease of deployment from testing to production environment.</li>
+</ul>
+</li>
+<li>Best tutorial<ul>
+<li><a href="https://github.com/tuanavu/airflow-tutorial" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/tuanavu/airflow-tutorial</a></li>
+</ul>
+</li>
+</ul>
+<p>Writing your first workflow</p>
+<p>Steps to write an Airflow DAG</p>
+<ul>
+<li>A DAG file, which is basically just a Python script, is a configuration file specifying the DAG’s structure as code.</li>
+<li>There are only 5 steps you need to remember to write an Airflow DAG or workflow<ul>
+<li>Step 1 : Importing modules</li>
+<li>Step 2 : Define default Arguments</li>
+<li>Step 3 : Instanticate a DAG</li>
+<li>Step 4 : Tasks</li>
+<li>Step 5 : Setting up Dependencies<ul>
+<li>Set the dependencies or the order in which the tasks should be executed in.</li>
+<li>Here’s a few ways you can define dependencies between them:<ul>
+<li>downstream example : t1 >> t2 </li>
+<li>list of tasks can also be set as : t1 >> [t2, t3]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Recap</p>
+<ul>
+<li>Basically a DAG is just a Python file, which is used to organize tasks and set their execution context. DAGs do not perform any actual computation.</li>
+<li>Instead, tasks are the elements of Airflow that actually “do the work” we want performed. And it is your job to write the configuration and orgaize the tasks in specific orders to create a complete data pipeline.</li>
+</ul>
+<p>Airflow concept</p>
+<ul>
+<li>We will learn about Airflow’s key concept</li>
+</ul>
+<p>Overview </p>
+<ul>
+<li>Airflow is a workflow management system which is used to programmatically author, schedule and monitor workflows</li>
+</ul>
+<p>DAGs</p>
+<ul>
+<li>Workflows are called DAGs (Directed Acyclic Graph).</li>
+<li>A DAG is a collection of alll the tasks you want to run, organized in a way that reflects their relationships and dependencies.</li>
+</ul>
+<p>Understand Directed Acyclic Graph</p>
+<ul>
+<li><p>To understand what is a Directed Acyclic Graph? First, we need to understand the graph data structure. This is a very special data structure in computer science.</p>
+<ul>
+<li>A Graph has 2 main parts:<ul>
+<li>The vertices (nodes) where the data is stored</li>
+<li>The edges (connections) which connect the nodes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Graphs are used to solve many real-life problems because they are used to represent networks.</p>
+<ul>
+<li>For example: social networks, system of roads, airline flights from city to city, how the Internet is conneted, etc</li>
+</ul>
+</li>
+<li><p>To represent direction in a graph</p>
+<ul>
+<li>Undirected graph: The relationship exists in both directions, the edge has no direction. <ul>
+<li>Example : If Mary was a friend of Francis, Francis would likewise be a friend of Mary.</li>
+</ul>
+</li>
+<li>Directed graph (digraph): Direction matters, since the edges in a graph are all one-way<ul>
+<li>An example graph: the course requirements for a computer science major.</li>
+<li>The class prerequisites graph is clearly a digraph since you must take some classes before others.</li>
+</ul>
+</li>
+<li>Acyclic graph: a graph has no cycles.</li>
+<li>Cyclic graph: a graph has cycles.<ul>
+<li>A cycle in a directed graph is a path that starts and ends at the same node. It has loop.</li>
+</ul>
+</li>
+<li>DAGs Summary <ul>
+<li><strong>Directed Acyclic Graph</strong> is a graph that has <strong>no cycles</strong> and data in each node flows forward in only <strong>one direction</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>It is useful to represent a complex data flows using a graph.</p>
+<ul>
+<li>Each node in the graph is a task</li>
+<li>The edges represent dependencies amongst tasks.</li>
+<li>These graphs are called computation graphs or data flow graphs and it transform the data as it flow through the graph and enable very complex numberic computations.</li>
+<li>Given that data only needs to be computed once on a given task and the computation then carries forward, the graph is directed and acyclic. This is why Airflow jobs are commonly referred to as “DAGs” (Directed Acyclic Graphs)</li>
+</ul>
+</li>
+<li><p>Beside Airflow, there are other cutting edge big data/data science frameworks is bulit using graph data structure.</p>
+</li>
+<li><p>Tensorflow - An open source machine learning framework</p>
+<ul>
+<li>TensorFlow uses a dataflow graphe to represent your computation in terms of the dependencies between individual operations.</li>
+</ul>
+</li>
+</ul>
+<p>Operators, and Tasks</p>
+<ul>
+<li>DAGs do not perform any actual computation. Instead, Operators determine what actually gets done.</li>
+<li>Task: once an operator is instantiated, it is referred to as a “task”. An operator describes a single task in a workflow.<ul>
+<li>Instantiating a task requires providing a unique task_id and DAG container</li>
+</ul>
+</li>
+<li>A DAG is a container that is used to organize tasks and set their execution context.</li>
+</ul>
+<p>Operators categories</p>
+<ul>
+<li>Typically, Operators are classified inot three categories:<ul>
+<li>Sensors<ul>
+<li>a certain type of operator that will keep running until a certain critera is met. Example include waiting for a certain time, external file, or upstream data source.<ul>
+<li>HdfsSensor: Waits for a file or floder to ladn in HDFS</li>
+<li>NamedHivePartitionSensor: check whether the most recent partition of a Hive table is available for downstream processing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Operators<ul>
+<li>triggers a certain action (e.g. run a bash command, execute a python funtion, or exxecute a Hive query, etc)<ul>
+<li>BashOperator: executes a bash command</li>
+<li>PythonOperator: calls an arbitrary Python function</li>
+<li>HiveOpertor: executes hql code or hive script in a specific Hive databases.</li>
+<li>BigQueryOperator: executes Google BigQuery SQL queries in a specific BigQuery database</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Transfers<ul>
+<li>moves data from one location to another.<ul>
+<li>MySqlToHiveTransfer: Moves data from MySql to Hive</li>
+<li>S3toRedshiftTransfer: load files from s3 to Redshift</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Working with Operators</p>
+<ul>
+<li>Airflow provides prebuilt operators for many common tasks.</li>
+<li>There are more operators being added by the community. You can just go to the Airflow official Github repo, specifically in the airflow / contrib / directory to look for the community added operators</li>
+<li>All operators are derived from BaseOperator and acquire much functionality throgh inheritance. Contributors can extend BaseOperator class to create custom operators as they see fit. </li>
+<li>Go to Github : apache / incubator-airflow / airflow / contrib / operators</li>
+</ul>
+<p>Defining Task Dependencies</p>
+<ul>
+<li>After defining a DAG, and instantiate all the tasks, you can then set the dependencies or the order in which the tasks should be executed in. </li>
+<li>Task dependencies are set using:<ul>
+<li>the set_upstream and set_downstream operators.</li>
+<li>the bitshift operators << and >></li>
+</ul>
+</li>
+</ul>
+<p>DagRuns and TaskInstances</p>
+<ul>
+<li>A key concept in Airflow is the excution_time. The execution times begin at the DAG’s start_date and repeat every schedule_interval.</li>
+<li>For this example the scheduled executin times would be (‘2018-12-01 00:00:00’, ‘2018-12-02 00:00:00’,…). For each execution_time, a DagRun is created an operates under the context of that execution time. A DagRun is simply a DAG that has a specific execution time.</li>
+<li>DagRuns are DAGs that runs at a certain time.</li>
+<li>TaskInstances are the task belongs to that DagRuns.<ul>
+<li>Each DagRun and TaskInstance is associated with an entry in Airflow’s metadata database that logs their state (e.g. “queued”, “running”, “failed”, “skipped”, “up for retry”).</li>
+</ul>
+</li>
+<li>You can check the concept on UI DAG Graph View and UI DAG Tree View<ul>
+<li>What each of the circle is a DagRun at a certain time and a little square boxes are all the test instances belong to that DagRuns </li>
+</ul>
+</li>
+</ul>
+<p>Airflow variables</p>
+<ul>
+<li></li>
+</ul>
+<ul>
+<li>작업의 흐름을 실행, 관리하는 오픈소스 플랫폼</li>
+<li>데이터 처리 파이프라인을 조율 하여, 데이터 중심 워크플로우를 구성할수 있다.</li>
+<li>워크플로우를 하나의 DAG로 정의<ul>
+<li>하나의 DAG는 한개 이상의 작업들(tasks)로 이뤄진다.</li>
+<li>작업간의 의존성 혹은 전후 관계가 생긴다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="vs-타-흐름-관리-도구-like-oozie"><a href="#vs-타-흐름-관리-도구-like-oozie" class="headerlink" title="vs 타 흐름 관리 도구 (like oozie)"></a>vs 타 흐름 관리 도구 (like oozie)</h3><ul>
+<li>flow 정의 : 파이썬 코드로 정의</li>
+<li>확장성 : 새로운 연산자와 실행자를 쉽게 정의, 라이브러리를 확장할수 있다.</li>
+<li>간결성 : Jinja 템플릿 엔진을 통해 깔끔하게 스크립트 매개 변수를 전달</li>
+<li>가용성 : 모듈 아키텍쳐를 가지며, 클러스터로 확장 가능한 메시지 큐를 통해 작업을 관리.</li>
+<li>직관적이고 다양한 기능의 UI</li>
+<li>적은 관리비용</li>
+</ul>
+<h3 id="개념"><a href="#개념" class="headerlink" title="개념"></a>개념</h3><ul>
+<li>작업(task)과 연산자(operator) 를 이용한다.</li>
+<li>DAG(Directed Acyclec Graph; 방향성 비순환 그래프)로 표현된다.<ul>
+<li>각 노드는 task, 방향성을 갖는 링크는 작업순서를 표현</li>
+<li>DagRun 이란 어떤시점에 실행된 DAG를 의미, 인스턴스 정로로 이해?!</li>
+</ul>
+</li>
+<li>기본적으로 제공하는 연산자는 아래와 같다.<ul>
+<li>BashOperator : Bash 실행</li>
+<li>PythonOperator : Python 함수 실행</li>
+<li>EmailOperator : 이메일 전송</li>
+<li>HTTPOperator : HTTP 요청 전송</li>
+<li>MySqlOperator, SqliteOperator, PostgresOperator, MsSqlOperator, OracleOperator, JdbcOperator: SQL 명령 실행</li>
+<li>Sensor : 특정시간, 파일, DB 레코드, S3 키 등을 기다림</li>
+</ul>
+</li>
+<li>파라미터 값이 적용된 연산자의 오브젝트를 task라 부른다.</li>
+</ul>
+<h3 id="용어"><a href="#용어" class="headerlink" title="용어"></a>용어</h3><ul>
+<li>Airflow DAG는 태스크로 구성된다.</li>
+<li>각 태스크는 오퍼레이터 클래스를 인스턴스화하여 만든다.</li>
+<li>DAG가 시작되면 Airflow 데이터베이스에 DagRun 항목을 만든다.</li>
+<li>특정 DagRun 맥락에서 태스크를 실행하면 태스크 인스턴스가 만들어진다.</li>
+<li>AIRFLOW_HOME은 DAG 정의 파일과 Airflow 플러그인을 저장하는 디렉터리이다.</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
+<li><a href="https://jwon.org/airflow-concepts/" target="_blank" rel="external nofollow noopener noreferrer">https://jwon.org/airflow-concepts/</a></li>
+<li><a href="https://aldente0630.github.io/data-engineering/2018/06/17/developing-workflows-with-apache-airflow.html" target="_blank" rel="external nofollow noopener noreferrer">https://aldente0630.github.io/data-engineering/2018/06/17/developing-workflows-with-apache-airflow.html</a></li>
+<li><a href="https://graspthegist.com/post/learn-airflow-part-0/" target="_blank" rel="external nofollow noopener noreferrer">https://graspthegist.com/post/learn-airflow-part-0/</a></li>
+<li><a href="https://graspthegist.com/post/learn-airflow-part-1-2/" target="_blank" rel="external nofollow noopener noreferrer">https://graspthegist.com/post/learn-airflow-part-1-2/</a></li>
+<li><a href="https://www.youtube.com/watch?v=AHMm1wfGuHE" target="_blank" rel="external nofollow noopener noreferrer">https://www.youtube.com/watch?v=AHMm1wfGuHE</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+
+
+    <div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="Crayon">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Crayon
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Back-end Engineer
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Seoul, Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            17
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            5
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            29
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/ppoffice" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://facebook.com" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="https://dribbble.com" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/ML/">
+            <span class="level-start">
+                <span class="level-item">ML</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/architecture/">
+            <span class="level-start">
+                <span class="level-item">architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/db/">
+            <span class="level-start">
+                <span class="level-item">db</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/redis/">
+            <span class="level-start">
+                <span class="level-item">redis</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/spring/">
+            <span class="level-start">
+                <span class="level-item">spring</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/16/aws-training/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-15T15:30:00.000Z">2019-12-16</time></div>
+                    <a href="/2019/12/16/aws-training/" class="title has-link-black-ter is-size-6 has-text-weight-normal">AWS training</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/08/java8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/java8.png" alt="Functional programming in java8">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-07T22:18:00.000Z">2019-12-08</time></div>
+                    <a href="/2019/12/08/java8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Functional programming in java8</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/28/oop/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="OOP : Object Oriented Programming">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
+                    <a href="/2019/11/28/oop/" class="title has-link-black-ter is-size-6 has-text-weight-normal">OOP : Object Oriented Programming</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/architecture/">architecture</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/28/ML/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ML : Machine Learning">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
+                    <a href="/2019/11/28/ML/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ML : Machine Learning</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/ML/">ML</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/28/setting_oracle/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Setting Oracle using docker">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
+                    <a href="/2019/11/28/setting_oracle/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Setting Oracle using docker</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/db/">db</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">October 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/airflow/">
+                        <span class="tag">airflow</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/akka/">
+                        <span class="tag">akka</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/apache/">
+                        <span class="tag">apache</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/aws/">
+                        <span class="tag">aws</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/bash/">
+                        <span class="tag">bash</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/clustering/">
+                        <span class="tag">clustering</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/designpattern/">
+                        <span class="tag">designpattern</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/docker/">
+                        <span class="tag">docker</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/factory/">
+                        <span class="tag">factory</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/functionalprogramming/">
+                        <span class="tag">functionalprogramming</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/future/">
+                        <span class="tag">future</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/gradle/">
+                        <span class="tag">gradle</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/infra/">
+                        <span class="tag">infra</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/java8/">
+                        <span class="tag">java8</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/k8s/">
+                        <span class="tag">k8s</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/kafka/">
+                        <span class="tag">kafka</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/kubernetes/">
+                        <span class="tag">kubernetes</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/machinelearning/">
+                        <span class="tag">machinelearning</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ml/">
+                        <span class="tag">ml</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/oop/">
+                        <span class="tag">oop</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/oracle/">
+                        <span class="tag">oracle</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/python/">
+                        <span class="tag">python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/shell/">
+                        <span class="tag">shell</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/spring/">
+                        <span class="tag">spring</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/springframework/">
+                        <span class="tag">springframework</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/traning/">
+                        <span class="tag">traning</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/xray/">
+                        <span class="tag">xray</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/">
+                        <span class="tag">객체지향</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        
+            <div class="column-right-shadow is-hidden-widescreen is-sticky">
+                
+                    
+                
+            </div>
+        
+    </div>
+
+
+
+                
+
+
+
+
+
+
+    <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+        
+            
+        
+        
+    </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Crayon&#39;s Blog" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Crayon&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: false,
+            fold: ''
+        }
+    }
+};
+</script>
+
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="external nofollow noopener noreferrer">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
