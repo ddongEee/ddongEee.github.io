@@ -264,7 +264,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1359 words)
+                    10 minutes read (About 1520 words)
                 </span>
                 
                 
@@ -327,6 +327,18 @@
 </ul>
 </li>
 </ul>
+<h2 id="Terms"><a href="#Terms" class="headerlink" title="Terms"></a>Terms</h2><ul>
+<li>Volume<ul>
+<li>container 변경사항을 UnionFS 를 통해 관리</li>
+<li>UnionFS 는 image layer 와 write layer(휘발성) 둘다관리</li>
+<li>목적 : write layer 데이터를 그나마. <strong>비휘발성인 host 저장</strong>하거나, <strong>컨테이너 사이 데이터 공유</strong></li>
+<li>host 와 container 가 동기화 됨으로, 양방향 으로 모든 액션(생성,수정,삭제)가 동기화됨</li>
+<li>$ docker run -it -v (호스트 디렉토리):(컨테이너의 volume 디렉토리) (이미지) /bin/bash</li>
+<li>다양한 응용의 고찰 : <a href="https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html" target="_blank" rel="external nofollow noopener noreferrer">https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html</a></li>
+<li></li>
+</ul>
+</li>
+</ul>
 <h1 id="Client-Images-Containers"><a href="#Client-Images-Containers" class="headerlink" title="Client, Images, Containers"></a>Client, Images, Containers</h1><h2 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h2><ul>
 <li>컨테이너는 호스트 시스템의 커널을 공유하며 (선택에 의해) 다른 컨테이너로부터 독립적이고 완비된 실행환경<ul>
 <li>전체 OS 환경이 필요하지 않음</li>
@@ -335,7 +347,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{tagname1}}/{{tabname2}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line">$ docker system prune <span class="hljs-comment"># docker stop된 컨테이너 모두 삭제 delete</span></span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line">$ docker volume prune <span class="hljs-comment"># docker volume 모두 삭제(delete all)</span></span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{name}}:{{version}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="Productionize-Debuging-flow"><a href="#Productionize-Debuging-flow" class="headerlink" title="Productionize, Debuging flow"></a>Productionize, Debuging flow</h1><h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
 <li>오케스트레이션</li>
@@ -526,7 +538,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1359 words)
+                    10 minutes read (About 1520 words)
                 </span>
                 
                 
@@ -589,6 +601,18 @@
 </ul>
 </li>
 </ul>
+<h2 id="Terms"><a href="#Terms" class="headerlink" title="Terms"></a>Terms</h2><ul>
+<li>Volume<ul>
+<li>container 변경사항을 UnionFS 를 통해 관리</li>
+<li>UnionFS 는 image layer 와 write layer(휘발성) 둘다관리</li>
+<li>목적 : write layer 데이터를 그나마. <strong>비휘발성인 host 저장</strong>하거나, <strong>컨테이너 사이 데이터 공유</strong></li>
+<li>host 와 container 가 동기화 됨으로, 양방향 으로 모든 액션(생성,수정,삭제)가 동기화됨</li>
+<li>$ docker run -it -v (호스트 디렉토리):(컨테이너의 volume 디렉토리) (이미지) /bin/bash</li>
+<li>다양한 응용의 고찰 : <a href="https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html" target="_blank" rel="external nofollow noopener noreferrer">https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html</a></li>
+<li></li>
+</ul>
+</li>
+</ul>
 <h1 id="Client-Images-Containers"><a href="#Client-Images-Containers" class="headerlink" title="Client, Images, Containers"></a>Client, Images, Containers</h1><h2 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h2><ul>
 <li>컨테이너는 호스트 시스템의 커널을 공유하며 (선택에 의해) 다른 컨테이너로부터 독립적이고 완비된 실행환경<ul>
 <li>전체 OS 환경이 필요하지 않음</li>
@@ -597,7 +621,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{tagname1}}/{{tabname2}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line">$ docker system prune <span class="hljs-comment"># docker stop된 컨테이너 모두 삭제 delete</span></span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line">$ docker volume prune <span class="hljs-comment"># docker volume 모두 삭제(delete all)</span></span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{name}}:{{version}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="Productionize-Debuging-flow"><a href="#Productionize-Debuging-flow" class="headerlink" title="Productionize, Debuging flow"></a>Productionize, Debuging flow</h1><h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
 <li>오케스트레이션</li>
@@ -701,7 +725,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            17
+                            19
                         </p>
                     </a>
                 </div>
@@ -725,7 +749,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            29
+                            32
                         </p>
                     </a>
                 </div>
@@ -838,6 +862,44 @@
         
         <article class="media">
             
+            <a href="/2020/09/02/bookreview-object-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/wang_tta_na_mu.png" alt="BookReview 오브젝트 01">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-02T08:02:00.000Z">2020-09-02</time></div>
+                    <a href="/2020/09/02/bookreview-object-01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">BookReview 오브젝트 01</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/08/30/bookreview-object-introduction/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Book review 오브젝트intro">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-29T21:47:00.000Z">2020-08-30</time></div>
+                    <a href="/2020/08/30/bookreview-object-introduction/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Book review 오브젝트intro</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/16/aws-training/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
@@ -893,44 +955,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/28/ML/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ML : Machine Learning">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/ML/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ML : Machine Learning</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/ML/">ML</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/28/setting_oracle/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Setting Oracle using docker">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/setting_oracle/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Setting Oracle using docker</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/db/">db</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -975,7 +999,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
+        <a href="/tags/BookReview/" style="font-size: 20px;">BookReview</a> <a href="/tags/OOP/" style="font-size: 20px;">OOP</a> <a href="/tags/Object/" style="font-size: 20px;">Object</a> <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
     </div>
 </div>
         
@@ -986,6 +1010,28 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
@@ -1087,6 +1133,27 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BookReview/">
+                        <span class="tag">BookReview</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/OOP/">
+                        <span class="tag">OOP</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Object/">
+                        <span class="tag">Object</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/airflow/">

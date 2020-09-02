@@ -139,6 +139,200 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 200 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/11/java/">future &amp; java</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h1 id="Future-vs-CompleteableFuture"><a href="#Future-vs-CompleteableFuture" class="headerlink" title="Future vs CompleteableFuture"></a>Future vs CompleteableFuture</h1><h2 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h2><ul>
+<li>java7 에서 제공하는 인터페이스</li>
+<li>비동기 프로세스 수행할수 있게 해줌</li>
+<li>비동기 프로세스 종료확인하는 isDone(), 타임아웃 제공하고 결과 출력하는 get() 메소드 제공</li>
+<li>간단하기는 하나 제공되는 기능이 별로 없음</li>
+</ul>
+<h2 id="CompeteableFuture"><a href="#CompeteableFuture" class="headerlink" title="CompeteableFuture"></a>CompeteableFuture</h2><ul>
+<li>java8 에서 제공하는 클래스</li>
+<li>Future 구현?! 클래스 간에 여러 의존성에 대한 관리를 쉽게 할수 있음</li>
+<li>Stream API 나 Optional 와 같은 람다 표현식과 파이프라인을 사용하여 비동기 작업을 조합할수 있다.</li>
+</ul>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
+<li><a href="https://doohyun.tistory.com/52" target="_blank" rel="external nofollow noopener noreferrer">https://doohyun.tistory.com/52</a></li>
+<li>[아직안봄] <a href="https://medium.com/@chanhyeonglee/completable-future-가이드-파트2-eb82768f095d" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@chanhyeonglee/completable-future-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%8C%8C%ED%8A%B82-eb82768f095d</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1024 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/11/python-infra/">Python&#39;s infra</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><ul>
+<li><p>인스턴스라는 말은 특정 객체 (a)가 어떤 클래스(A) 의 객체인지를 관계 위주로 설명할때 사용</p>
+<ul>
+<li>‘a는 인스턴스’ 모다는 ‘a는 객체’라는 표현이 어울리며, ‘a 는 A의 객체’ 보다는 ‘a는 A의 인스턴스’라는 표현이 어울린다.</li>
+<li>type(a) 는 a객체가 어떤 타입인지 return 한다.</li>
+<li>id(a) 는 a객체의 주소를 return 한다.</li>
+</ul>
+</li>
+<li><p>pass 는 아무것도 사용하지 않는 문법으로, 임시로 코드를 작성할때 주로 사용된다.</p>
+</li>
+<li><p>Constructor & Method</p>
+<ul>
+<li><p>아래와 같이 선언</p>
+<figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SomeParent</span>:</span></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">    self.first = first</span><br><span class="line">    self.second = second</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setData</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">		self.first = first</span><br><span class="line">		self.second = second</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>파이썬에서는 메서드의 첫번째 매개변수로 ‘self’를 사용한다. 객체를 호출할때 호출객체 자신이 전달되기 때문이다.</p>
+</li>
+</ul>
+</li>
+<li><p>Inheritance </p>
+<ul>
+<li><pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">SomeChild</span><span class="params">(SomeParent)</span>:</span>
+  classVariable = <span class="string">"hello"</span>
+  <span class="function"><span class="keyword">def</span> <span class="title">pow</span><span class="params">(self)</span>:</span>
+    <span class="keyword">return</span> self.first ** self.second
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - Method overriding 도 가능하다.</span><br><span class="line"></span><br><span class="line">  - classVariable 의 경우 클래스 변수이다.</span><br><span class="line"></span><br><span class="line">- Lambda</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    >>> add = lambda a,b: a+b</span><br><span class="line">    >>> result = add(3,4)</span><br><span class="line">    >>> print(result)</span><br></pre></td></tr></tbody></table></figure></code></pre>
+</li>
+<li><p>위와 같이 람다를 사용할수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><ul>
+<li><p>Library.</p>
+</li>
+<li><p>함수나 변수 또는 클래스를 모아놓은 파일.</p>
+</li>
+<li><p>사용용도를 기준으로 파일을 나누어, 필요할때 해당 코드를 Import 하여 사용하기 위한 기준? 단위</p>
+</li>
+<li><p>포함하려는 파일이 같은 디렉토리에 있어야 한다.</p>
+</li>
+<li><p>import ‘moduleName’ 으로 사용한다. ‘.py’는 입력하지 않아도 된다.</p>
+<ul>
+<li>함수를 파일명 없이 바로 사용하고 싶다면, ‘from 모듈이름 import 모듈함수, 모듈함수, …’ 와 같이 사용할수 있다.</li>
+<li>‘from 모듈이름 import *’ 은 ‘모듈이름’ 에 포함된 모든 함수를 사용한다는 뜻</li>
+</ul>
+</li>
+<li><pre><code class="python"><span class="comment"># __name__ 변수는 파이썬이 내부적으로 사용하는 변수 이름이다. '특정.py'을 직접 실행할 경우, 해당 특정.py 내부의 __name__ 변수에는 __main__ 값이 저장된다. 하지만 파이썬 셸이나 다른 파이썬 모듈에서 import 특정 일경우, __name__ 안에는 __특정__ 이 저장되어 있다.</span>
+<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+    <span class="keyword">print</span> (<span class="string">"Hello"</span>)
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 모듈이 있는 디렉토리로 이동하지 않고 아래의 방법을 사용하여 어디서든 모듈을 불러와 사용할두 있다.</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    $ python</span><br><span class="line">    >>> import sys</span><br><span class="line">    >>> sys.path</span><br><span class="line">    >>> sys.path.append("/User/crayon/..")</span><br><span class="line">    </span><br><span class="line">    # 혹은</span><br><span class="line">    </span><br><span class="line">    $ set PYTHONPATH=/User/crayon</span><br><span class="line">    $ python </span><br><span class="line">    >>> import someParent</span><br><span class="line">    >>> ~~</span><br></pre></td></tr></tbody></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h3><ul>
+<li><p>dot(.) 를 사용하여 파이썬 모듈을 계층적(디렉토리 구조)으로 관리할수 있게 해준다.</p>
+</li>
+<li><p>파이썬 패키지는 디렉토리와 파이썬 모듈로 이뤄져 있다.</p>
+</li>
+<li><pre><code class="python"><span class="comment"># 패키지 않의 함수 실행 방법</span>
+<span class="comment"># 1.</span>
+<span class="meta">>>> </span><span class="keyword">import</span> game.sound.echo
+<span class="meta">>>> </span>game.sound.echo.echo_test()
+<span class="comment"># 2.</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> echo
+<span class="meta">>>> </span>echo.echo_test()
+<span class="comment"># 3.</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound.echo <span class="keyword">import</span> echo_test
+<span class="meta">>>> </span>echo_test()
+<span class="comment"># 4. 아래와 같이 사용하려면, 특정 위치의 __init__.py에 아래와 같이 선언되어야 한다.</span>
+<span class="comment"># /User/crayon/game/sound/__init__.py</span>
+<span class="comment"># __all__ = ['echo']</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> *
+<span class="meta">>>> </span>echo.echo_test()
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- relative 패키지</span><br><span class="line"></span><br><span class="line">  - . 혹은 .. 으로 선언하는거 같다.</span><br><span class="line"></span><br><span class="line">### PyPI</span><br><span class="line"></span><br><span class="line">- Python Package Index의 줄임말로 파이썬 패키지 저장소</span><br><span class="line"></span><br><span class="line">### pip, pip3</span><br><span class="line"></span><br><span class="line">- Python package management system. 파이썬으로 작성된 패키지 라이브러리를 관리해 주는 시스템</span><br><span class="line"></span><br><span class="line">- python 3.4 이후에는 기본적으로 포함되어 있음</span><br><span class="line"></span><br><span class="line">- pip list 를 통해 현재 local에 설치된 파이썬 패키지 목록을 확인할수 있음</span><br><span class="line"></span><br><span class="line">- 아래를 통해 pip 를 업데이트 할수 있다.</span><br><span class="line"></span><br><span class="line">- ```bash</span><br><span class="line">  # pip update 하기</span><br><span class="line">  $ pip install --upgrade pip	</span><br><span class="line">  # python 패키지 설치하기</span><br><span class="line">  $ pip install numpy</span><br><span class="line">  # 특정버전 설치</span><br><span class="line">  $ pip install numpy == 1.0.0</span><br><span class="line">  # 패키지 버전 업그레이드</span><br><span class="line">  $ pip install --upgrade numpy</span><br><span class="line">  # python 패키지 제거하기</span><br><span class="line">  $ pip uninstall numpy</span><br></pre></td></tr></tbody></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="Virtaul-env"><a href="#Virtaul-env" class="headerlink" title="Virtaul env"></a>Virtaul env</h3><ul>
+<li>virtualenv is a tool to create isolated Python environments.</li>
+</ul>
+<p>pyenv, pyenv-virtualenv setting</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ brew install pyenv</span><br><span class="line">$ brew install pyenv-virtualenv</span><br><span class="line">$ brew install readline xz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">################################## write one .zshrc ##################################</span></span><br><span class="line"><span class="hljs-built_in">export</span> PYENV_ROOT=<span class="hljs-variable">$HOME</span>/.pyenv</span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv-virtualenv-init > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv virtualenv-init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-comment">######################################################################################</span></span><br><span class="line"></span><br><span class="line">$ pyenv install --list</span><br><span class="line">$ pyenv install 3.7.4</span><br><span class="line">$ pyenv uninstall 3.7.4</span><br><span class="line">$ pyenv global 3.7.4</span><br><span class="line">$ pyenv versions</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pyenv <span class="hljs-built_in">which</span> python</span><br><span class="line"></span><br><span class="line">$ pyenv virtualenv 3.7.4 sample-env</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## Apply env on directory</span></span><br><span class="line">$ <span class="hljs-built_in">cd</span> some_dicrector</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span> sample-env</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pip list</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+
+
+<p>참고</p>
+<ul>
+<li><a href="https://book.coalastudy.com/python-basic/" target="_blank" rel="external nofollow noopener noreferrer">https://book.coalastudy.com/python-basic/</a></li>
+<li><a href="https://wikidocs.net/29" target="_blank" rel="external nofollow noopener noreferrer">https://wikidocs.net/29</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-07-06T15:00:00.000Z">2019-07-07</time>
                 
                 
@@ -1400,6 +1594,200 @@
 </div>
 </div>-->
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 200 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/11/java/">future &amp; java</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h1 id="Future-vs-CompleteableFuture"><a href="#Future-vs-CompleteableFuture" class="headerlink" title="Future vs CompleteableFuture"></a>Future vs CompleteableFuture</h1><h2 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h2><ul>
+<li>java7 에서 제공하는 인터페이스</li>
+<li>비동기 프로세스 수행할수 있게 해줌</li>
+<li>비동기 프로세스 종료확인하는 isDone(), 타임아웃 제공하고 결과 출력하는 get() 메소드 제공</li>
+<li>간단하기는 하나 제공되는 기능이 별로 없음</li>
+</ul>
+<h2 id="CompeteableFuture"><a href="#CompeteableFuture" class="headerlink" title="CompeteableFuture"></a>CompeteableFuture</h2><ul>
+<li>java8 에서 제공하는 클래스</li>
+<li>Future 구현?! 클래스 간에 여러 의존성에 대한 관리를 쉽게 할수 있음</li>
+<li>Stream API 나 Optional 와 같은 람다 표현식과 파이프라인을 사용하여 비동기 작업을 조합할수 있다.</li>
+</ul>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
+<li><a href="https://doohyun.tistory.com/52" target="_blank" rel="external nofollow noopener noreferrer">https://doohyun.tistory.com/52</a></li>
+<li>[아직안봄] <a href="https://medium.com/@chanhyeonglee/completable-future-가이드-파트2-eb82768f095d" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@chanhyeonglee/completable-future-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%8C%8C%ED%8A%B82-eb82768f095d</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1024 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/11/python-infra/">Python&#39;s infra</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><ul>
+<li><p>인스턴스라는 말은 특정 객체 (a)가 어떤 클래스(A) 의 객체인지를 관계 위주로 설명할때 사용</p>
+<ul>
+<li>‘a는 인스턴스’ 모다는 ‘a는 객체’라는 표현이 어울리며, ‘a 는 A의 객체’ 보다는 ‘a는 A의 인스턴스’라는 표현이 어울린다.</li>
+<li>type(a) 는 a객체가 어떤 타입인지 return 한다.</li>
+<li>id(a) 는 a객체의 주소를 return 한다.</li>
+</ul>
+</li>
+<li><p>pass 는 아무것도 사용하지 않는 문법으로, 임시로 코드를 작성할때 주로 사용된다.</p>
+</li>
+<li><p>Constructor & Method</p>
+<ul>
+<li><p>아래와 같이 선언</p>
+<figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SomeParent</span>:</span></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">    self.first = first</span><br><span class="line">    self.second = second</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setData</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">		self.first = first</span><br><span class="line">		self.second = second</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>파이썬에서는 메서드의 첫번째 매개변수로 ‘self’를 사용한다. 객체를 호출할때 호출객체 자신이 전달되기 때문이다.</p>
+</li>
+</ul>
+</li>
+<li><p>Inheritance </p>
+<ul>
+<li><pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">SomeChild</span><span class="params">(SomeParent)</span>:</span>
+  classVariable = <span class="string">"hello"</span>
+  <span class="function"><span class="keyword">def</span> <span class="title">pow</span><span class="params">(self)</span>:</span>
+    <span class="keyword">return</span> self.first ** self.second
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - Method overriding 도 가능하다.</span><br><span class="line"></span><br><span class="line">  - classVariable 의 경우 클래스 변수이다.</span><br><span class="line"></span><br><span class="line">- Lambda</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    >>> add = lambda a,b: a+b</span><br><span class="line">    >>> result = add(3,4)</span><br><span class="line">    >>> print(result)</span><br></pre></td></tr></tbody></table></figure></code></pre>
+</li>
+<li><p>위와 같이 람다를 사용할수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><ul>
+<li><p>Library.</p>
+</li>
+<li><p>함수나 변수 또는 클래스를 모아놓은 파일.</p>
+</li>
+<li><p>사용용도를 기준으로 파일을 나누어, 필요할때 해당 코드를 Import 하여 사용하기 위한 기준? 단위</p>
+</li>
+<li><p>포함하려는 파일이 같은 디렉토리에 있어야 한다.</p>
+</li>
+<li><p>import ‘moduleName’ 으로 사용한다. ‘.py’는 입력하지 않아도 된다.</p>
+<ul>
+<li>함수를 파일명 없이 바로 사용하고 싶다면, ‘from 모듈이름 import 모듈함수, 모듈함수, …’ 와 같이 사용할수 있다.</li>
+<li>‘from 모듈이름 import *’ 은 ‘모듈이름’ 에 포함된 모든 함수를 사용한다는 뜻</li>
+</ul>
+</li>
+<li><pre><code class="python"><span class="comment"># __name__ 변수는 파이썬이 내부적으로 사용하는 변수 이름이다. '특정.py'을 직접 실행할 경우, 해당 특정.py 내부의 __name__ 변수에는 __main__ 값이 저장된다. 하지만 파이썬 셸이나 다른 파이썬 모듈에서 import 특정 일경우, __name__ 안에는 __특정__ 이 저장되어 있다.</span>
+<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+    <span class="keyword">print</span> (<span class="string">"Hello"</span>)
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 모듈이 있는 디렉토리로 이동하지 않고 아래의 방법을 사용하여 어디서든 모듈을 불러와 사용할두 있다.</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    $ python</span><br><span class="line">    >>> import sys</span><br><span class="line">    >>> sys.path</span><br><span class="line">    >>> sys.path.append("/User/crayon/..")</span><br><span class="line">    </span><br><span class="line">    # 혹은</span><br><span class="line">    </span><br><span class="line">    $ set PYTHONPATH=/User/crayon</span><br><span class="line">    $ python </span><br><span class="line">    >>> import someParent</span><br><span class="line">    >>> ~~</span><br></pre></td></tr></tbody></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h3><ul>
+<li><p>dot(.) 를 사용하여 파이썬 모듈을 계층적(디렉토리 구조)으로 관리할수 있게 해준다.</p>
+</li>
+<li><p>파이썬 패키지는 디렉토리와 파이썬 모듈로 이뤄져 있다.</p>
+</li>
+<li><pre><code class="python"><span class="comment"># 패키지 않의 함수 실행 방법</span>
+<span class="comment"># 1.</span>
+<span class="meta">>>> </span><span class="keyword">import</span> game.sound.echo
+<span class="meta">>>> </span>game.sound.echo.echo_test()
+<span class="comment"># 2.</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> echo
+<span class="meta">>>> </span>echo.echo_test()
+<span class="comment"># 3.</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound.echo <span class="keyword">import</span> echo_test
+<span class="meta">>>> </span>echo_test()
+<span class="comment"># 4. 아래와 같이 사용하려면, 특정 위치의 __init__.py에 아래와 같이 선언되어야 한다.</span>
+<span class="comment"># /User/crayon/game/sound/__init__.py</span>
+<span class="comment"># __all__ = ['echo']</span>
+<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> *
+<span class="meta">>>> </span>echo.echo_test()
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- relative 패키지</span><br><span class="line"></span><br><span class="line">  - . 혹은 .. 으로 선언하는거 같다.</span><br><span class="line"></span><br><span class="line">### PyPI</span><br><span class="line"></span><br><span class="line">- Python Package Index의 줄임말로 파이썬 패키지 저장소</span><br><span class="line"></span><br><span class="line">### pip, pip3</span><br><span class="line"></span><br><span class="line">- Python package management system. 파이썬으로 작성된 패키지 라이브러리를 관리해 주는 시스템</span><br><span class="line"></span><br><span class="line">- python 3.4 이후에는 기본적으로 포함되어 있음</span><br><span class="line"></span><br><span class="line">- pip list 를 통해 현재 local에 설치된 파이썬 패키지 목록을 확인할수 있음</span><br><span class="line"></span><br><span class="line">- 아래를 통해 pip 를 업데이트 할수 있다.</span><br><span class="line"></span><br><span class="line">- ```bash</span><br><span class="line">  # pip update 하기</span><br><span class="line">  $ pip install --upgrade pip	</span><br><span class="line">  # python 패키지 설치하기</span><br><span class="line">  $ pip install numpy</span><br><span class="line">  # 특정버전 설치</span><br><span class="line">  $ pip install numpy == 1.0.0</span><br><span class="line">  # 패키지 버전 업그레이드</span><br><span class="line">  $ pip install --upgrade numpy</span><br><span class="line">  # python 패키지 제거하기</span><br><span class="line">  $ pip uninstall numpy</span><br></pre></td></tr></tbody></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="Virtaul-env"><a href="#Virtaul-env" class="headerlink" title="Virtaul env"></a>Virtaul env</h3><ul>
+<li>virtualenv is a tool to create isolated Python environments.</li>
+</ul>
+<p>pyenv, pyenv-virtualenv setting</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ brew install pyenv</span><br><span class="line">$ brew install pyenv-virtualenv</span><br><span class="line">$ brew install readline xz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">################################## write one .zshrc ##################################</span></span><br><span class="line"><span class="hljs-built_in">export</span> PYENV_ROOT=<span class="hljs-variable">$HOME</span>/.pyenv</span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv-virtualenv-init > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv virtualenv-init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-comment">######################################################################################</span></span><br><span class="line"></span><br><span class="line">$ pyenv install --list</span><br><span class="line">$ pyenv install 3.7.4</span><br><span class="line">$ pyenv uninstall 3.7.4</span><br><span class="line">$ pyenv global 3.7.4</span><br><span class="line">$ pyenv versions</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pyenv <span class="hljs-built_in">which</span> python</span><br><span class="line"></span><br><span class="line">$ pyenv virtualenv 3.7.4 sample-env</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## Apply env on directory</span></span><br><span class="line">$ <span class="hljs-built_in">cd</span> some_dicrector</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span> sample-env</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pip list</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+
+
+<p>참고</p>
+<ul>
+<li><a href="https://book.coalastudy.com/python-basic/" target="_blank" rel="external nofollow noopener noreferrer">https://book.coalastudy.com/python-basic/</a></li>
+<li><a href="https://wikidocs.net/29" target="_blank" rel="external nofollow noopener noreferrer">https://wikidocs.net/29</a></li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     
 <div class="card">
     
@@ -2713,7 +3101,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            17
+                            19
                         </p>
                     </a>
                 </div>
@@ -2737,7 +3125,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            29
+                            32
                         </p>
                     </a>
                 </div>
@@ -2850,6 +3238,44 @@
         
         <article class="media">
             
+            <a href="/2020/09/02/bookreview-object-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/wang_tta_na_mu.png" alt="BookReview 오브젝트 01">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-02T08:02:00.000Z">2020-09-02</time></div>
+                    <a href="/2020/09/02/bookreview-object-01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">BookReview 오브젝트 01</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/08/30/bookreview-object-introduction/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Book review 오브젝트intro">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-29T21:47:00.000Z">2020-08-30</time></div>
+                    <a href="/2020/08/30/bookreview-object-introduction/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Book review 오브젝트intro</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/16/aws-training/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
@@ -2905,44 +3331,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/28/ML/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ML : Machine Learning">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/ML/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ML : Machine Learning</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/ML/">ML</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/28/setting_oracle/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Setting Oracle using docker">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/setting_oracle/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Setting Oracle using docker</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/db/">db</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -2987,7 +3375,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
+        <a href="/tags/BookReview/" style="font-size: 20px;">BookReview</a> <a href="/tags/OOP/" style="font-size: 20px;">OOP</a> <a href="/tags/Object/" style="font-size: 20px;">Object</a> <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
     </div>
 </div>
         
@@ -2998,6 +3386,28 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
@@ -3099,6 +3509,27 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BookReview/">
+                        <span class="tag">BookReview</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/OOP/">
+                        <span class="tag">OOP</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Object/">
+                        <span class="tag">Object</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/airflow/">

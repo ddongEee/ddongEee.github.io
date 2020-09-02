@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>http://ddongeee.github.io/2020/08/30/bookreview-object-introduction/</loc>
+        <lastmod>2020-09-02T17:14:29.977Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://ddongeee.github.io/2020/09/02/bookreview-object-01/</loc>
+        <lastmod>2020-09-02T17:13:53.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://ddongeee.github.io/2019/08/25/docker/</loc>
+        <lastmod>2020-08-30T06:58:56.341Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://ddongeee.github.io/2019/12/08/java8/</loc>
         <lastmod>2020-06-13T12:33:19.743Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,7 +56,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2018/11/06/toby-spring-summary/</loc>
+        <loc>http://ddongeee.github.io/2019/11/28/setting_oracle/</loc>
         <lastmod>2020-06-06T08:36:33.197Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +64,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/11/28/setting_oracle/</loc>
+        <loc>http://ddongeee.github.io/2018/11/06/toby-spring-summary/</loc>
         <lastmod>2020-06-06T08:36:33.197Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -64,14 +88,6 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/08/25/docker/</loc>
-        <lastmod>2020-06-06T08:36:33.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://ddongeee.github.io/2019/07/01/apache-airflow/</loc>
         <lastmod>2020-06-06T08:36:33.195Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -80,7 +96,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/07/07/akka-k8s/</loc>
+        <loc>http://ddongeee.github.io/2019/07/01/aws-xray/</loc>
         <lastmod>2020-06-06T08:36:33.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -88,7 +104,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/07/01/aws-xray/</loc>
+        <loc>http://ddongeee.github.io/2019/07/07/akka-k8s/</loc>
         <lastmod>2020-06-06T08:36:33.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -128,7 +144,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/11/28/oop/</loc>
+        <loc>http://ddongeee.github.io/2019/04/08/shell-command-and-script/</loc>
         <lastmod>2020-06-06T08:36:33.193Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -136,7 +152,7 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2019/04/08/shell-command-and-script/</loc>
+        <loc>http://ddongeee.github.io/2019/11/28/oop/</loc>
         <lastmod>2020-06-06T08:36:33.193Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

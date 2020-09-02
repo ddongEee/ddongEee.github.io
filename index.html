@@ -136,6 +136,171 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2020/09/02/bookreview-object-01/" class="image is-7by1">
+            <img class="thumbnail" src="/images/wang_tta_na_mu.png" alt="BookReview 오브젝트 01">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-09-02T08:02:00.000Z">2020-09-02</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 516 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/09/02/bookreview-object-01/">BookReview 오브젝트 01</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h2 id="객체-지향-설계란"><a href="#객체-지향-설계란" class="headerlink" title="객체(지향), 설계란"></a>객체(지향), 설계란</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
+<li><strong>자율적인 객체</strong>들이 오직 <strong>메시지</strong>만을 통해 <strong>협력</strong>하여 요구사항을 해결하도록 설계하는것</li>
+</ul>
+<h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><ul>
+<li><strong>요구사항 변경에 용이</strong>하고, <strong>코드 파악도 쉬워</strong>진다. </li>
+</ul>
+<h3 id="How"><a href="#How" class="headerlink" title="How"></a>How</h3><ul>
+<li><h6 id="자율적인-객체-만들기"><a href="#자율적인-객체-만들기" class="headerlink" title="자율적인 객체 만들기"></a>자율적인 객체 만들기</h6><ul>
+<li>캡슐화 적용<ul>
+<li>메시지 만으로 객체와 상호작용</li>
+<li>객체 내부의 상태를 캡슐화, 객체간에 오직 메시지를 통해서만 상호작용하도록 만드는것</li>
+<li>불필요한 의존성을 제거함으로써, 결합도(coupling) 낮추기</li>
+</ul>
+</li>
+<li>책임의 이동<ul>
+<li>절차지향과는 다른 객체지향의 특징중 하나.</li>
+<li>연관된 상태(데이터) 혹은 행동(메소드)를 가지고 있는 객체에게 위임.<ul>
+<li>응집도가 높아짐</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>의인화 적용<ul>
+<li>능동적인(자율적인) 객체가 될수 있음 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="메시지만을-통한-객체간에-협력적인-관계-만들기"><a href="#메시지만을-통한-객체간에-협력적인-관계-만들기" class="headerlink" title="메시지만을 통한 객체간에 협력적인 관계 만들기"></a>메시지만을 통한 객체간에 협력적인 관계 만들기</h6><ul>
+<li>메시지(인터페이스)로 상호작용 (모든 객체는 캡슐화 되어있다)</li>
+<li>상대 객체의 상태 혹은 행동으로 대화하지 않고, 필요한 부분을 위임하고, 결과만 받기</li>
+</ul>
+</li>
+</ul>
+<h3 id="What"><a href="#What" class="headerlink" title="What"></a>What</h3><ul>
+<li>적절한 책임을 가지고 있는 각각의 자율적인 객체들은, 협력하는 객체들과 의존성(결합도)이 낮다.<ul>
+<li>이는 요구사항 변경에 용이하다.</li>
+</ul>
+</li>
+<li>이러한 책임을 가지는 객체들이 메시지로만 상호작용한다면, 추상화 하기 편하다.<ul>
+<li>추상화된 코드는 이해하기 편하다. (vs getter, setter)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h3><h6 id="결합도-Coupling-응집도-Cohesion-관련"><a href="#결합도-Coupling-응집도-Cohesion-관련" class="headerlink" title="결합도(Coupling), 응집도(Cohesion) 관련"></a>결합도(Coupling), 응집도(Cohesion) 관련</h6><ul>
+<li>Getter, Setter 사용<ul>
+<li>Getter, Setter 는 메시지가 아니다. (개인적인 생각..)</li>
+<li>Getter, Setter 를 사용하면 결합도가 높아진다.</li>
+<li>Getter, Setter 를 사용하면 응집도가 낮아진다.</li>
+<li>객체 내부의 여러 상태를 바꾸는 혹은 생성후 설정하는 것을 여러 setter로 하는것과 context 를 넘겨 자율적으로 설정하는 것</li>
+</ul>
+</li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-08-29T21:47:00.000Z">2020-08-30</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 197 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/08/30/bookreview-object-introduction/">Book review 오브젝트intro</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><p>서문</p>
+<p>목차</p>
+<p>1장 ‘객체, 설계’</p>
+<p>2장 ‘객체지향 프로그래밍’</p>
+<p>3장 ‘역할, 책임, 협력’</p>
+<p>4장 ‘설계 품질과 트레이드오프’</p>
+<p>5장 ‘책임 할당하기’</p>
+<p>6장 ‘메시지와 인터페이스’</p>
+<p>7장 ‘객체 분해’</p>
+<p>8장 ‘의존성 관리하기’</p>
+<p>9장 ‘유연한 설계’</p>
+<p>10장 ‘상속과 코드 재사용’</p>
+<p>11장 ‘합성과 유연한 설계’</p>
+<p>12장 ‘다형성’</p>
+<p>13장 ‘서브클래싱과 서브타이핑’</p>
+<p>14장 ‘일관성 있는 협력’</p>
+<p>15장 ‘디자인 패턴과 프레임워크’</p>
+<p>부록 A ‘계약에 의한 설계’</p>
+<p>부록 B ‘타입 계층의 구현’</p>
+<p>부록 C ‘동적인 협력, 정작인 코드’</p>
+<p>부록 D ‘참고문헌’</p>
+<h1 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h1><h1 id="H1-Hello-World"><a href="#H1-Hello-World" class="headerlink" title="H1 : Hello World"></a>H1 : Hello World</h1><h2 id="H2-Hello-World"><a href="#H2-Hello-World" class="headerlink" title="H2 : Hello World"></a>H2 : Hello World</h2><h3 id="H3-Hello-world"><a href="#H3-Hello-world" class="headerlink" title="H3 : Hello world"></a>H3 : Hello world</h3><h4 id="H4-Hello-world"><a href="#H4-Hello-world" class="headerlink" title="H4 : Hello world"></a>H4 : Hello world</h4><h5 id="H5-Hello-world"><a href="#H5-Hello-world" class="headerlink" title="H5 : Hello world"></a>H5 : Hello world</h5><h6 id="H6-Hello-world"><a href="#H6-Hello-world" class="headerlink" title="H6 : Hello world"></a>H6 : Hello world</h6><p>H7 : Hello world</p>
+<figure class="highlight java hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String helloWorld = <span class="hljs-string">"Hello World!"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2019/12/16/aws-training/" class="image is-7by1">
             <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
         </a>
@@ -922,7 +1087,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1359 words)
+                    10 minutes read (About 1520 words)
                 </span>
                 
                 
@@ -985,6 +1150,18 @@
 </ul>
 </li>
 </ul>
+<h2 id="Terms"><a href="#Terms" class="headerlink" title="Terms"></a>Terms</h2><ul>
+<li>Volume<ul>
+<li>container 변경사항을 UnionFS 를 통해 관리</li>
+<li>UnionFS 는 image layer 와 write layer(휘발성) 둘다관리</li>
+<li>목적 : write layer 데이터를 그나마. <strong>비휘발성인 host 저장</strong>하거나, <strong>컨테이너 사이 데이터 공유</strong></li>
+<li>host 와 container 가 동기화 됨으로, 양방향 으로 모든 액션(생성,수정,삭제)가 동기화됨</li>
+<li>$ docker run -it -v (호스트 디렉토리):(컨테이너의 volume 디렉토리) (이미지) /bin/bash</li>
+<li>다양한 응용의 고찰 : <a href="https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html" target="_blank" rel="external nofollow noopener noreferrer">https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html</a></li>
+<li></li>
+</ul>
+</li>
+</ul>
 <h1 id="Client-Images-Containers"><a href="#Client-Images-Containers" class="headerlink" title="Client, Images, Containers"></a>Client, Images, Containers</h1><h2 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h2><ul>
 <li>컨테이너는 호스트 시스템의 커널을 공유하며 (선택에 의해) 다른 컨테이너로부터 독립적이고 완비된 실행환경<ul>
 <li>전체 OS 환경이 필요하지 않음</li>
@@ -993,7 +1170,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{tagname1}}/{{tabname2}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line">$ docker system prune <span class="hljs-comment"># docker stop된 컨테이너 모두 삭제 delete</span></span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line">$ docker volume prune <span class="hljs-comment"># docker volume 모두 삭제(delete all)</span></span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{name}}:{{version}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="Productionize-Debuging-flow"><a href="#Productionize-Debuging-flow" class="headerlink" title="Productionize, Debuging flow"></a>Productionize, Debuging flow</h1><h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
 <li>오케스트레이션</li>
@@ -1139,200 +1316,6 @@
 <li><a href="https://medium.com/@umanking/카프카에-대해서-이야기-하기전에-먼저-data에-대해서-이야기해보자-d2e3ca2f3c2" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@umanking/%EC%B9%B4%ED%94%84%EC%B9%B4%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-%ED%95%98%EA%B8%B0%EC%A0%84%EC%97%90-%EB%A8%BC%EC%A0%80-data%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EB%B3%B4%EC%9E%90-d2e3ca2f3c2</a></li>
 <li><a href="https://www.popit.kr/kafka-운영자가-말하는-처음-접하는-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka/</a></li>
 <li><a href="https://coding-start.tistory.com/133" target="_blank" rel="external nofollow noopener noreferrer">https://coding-start.tistory.com/133</a></li>
-</ul>
-</body></html>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7 minutes read (About 1024 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/11/python-infra/">Python&#39;s infra</a>
-            
-        </h1>
-        <div class="content">
-            <html><head></head><body><h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><ul>
-<li><p>인스턴스라는 말은 특정 객체 (a)가 어떤 클래스(A) 의 객체인지를 관계 위주로 설명할때 사용</p>
-<ul>
-<li>‘a는 인스턴스’ 모다는 ‘a는 객체’라는 표현이 어울리며, ‘a 는 A의 객체’ 보다는 ‘a는 A의 인스턴스’라는 표현이 어울린다.</li>
-<li>type(a) 는 a객체가 어떤 타입인지 return 한다.</li>
-<li>id(a) 는 a객체의 주소를 return 한다.</li>
-</ul>
-</li>
-<li><p>pass 는 아무것도 사용하지 않는 문법으로, 임시로 코드를 작성할때 주로 사용된다.</p>
-</li>
-<li><p>Constructor & Method</p>
-<ul>
-<li><p>아래와 같이 선언</p>
-<figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SomeParent</span>:</span></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">    self.first = first</span><br><span class="line">    self.second = second</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setData</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">		self.first = first</span><br><span class="line">		self.second = second</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>파이썬에서는 메서드의 첫번째 매개변수로 ‘self’를 사용한다. 객체를 호출할때 호출객체 자신이 전달되기 때문이다.</p>
-</li>
-</ul>
-</li>
-<li><p>Inheritance </p>
-<ul>
-<li><pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">SomeChild</span><span class="params">(SomeParent)</span>:</span>
-  classVariable = <span class="string">"hello"</span>
-  <span class="function"><span class="keyword">def</span> <span class="title">pow</span><span class="params">(self)</span>:</span>
-    <span class="keyword">return</span> self.first ** self.second
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - Method overriding 도 가능하다.</span><br><span class="line"></span><br><span class="line">  - classVariable 의 경우 클래스 변수이다.</span><br><span class="line"></span><br><span class="line">- Lambda</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    >>> add = lambda a,b: a+b</span><br><span class="line">    >>> result = add(3,4)</span><br><span class="line">    >>> print(result)</span><br></pre></td></tr></tbody></table></figure></code></pre>
-</li>
-<li><p>위와 같이 람다를 사용할수 있다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><ul>
-<li><p>Library.</p>
-</li>
-<li><p>함수나 변수 또는 클래스를 모아놓은 파일.</p>
-</li>
-<li><p>사용용도를 기준으로 파일을 나누어, 필요할때 해당 코드를 Import 하여 사용하기 위한 기준? 단위</p>
-</li>
-<li><p>포함하려는 파일이 같은 디렉토리에 있어야 한다.</p>
-</li>
-<li><p>import ‘moduleName’ 으로 사용한다. ‘.py’는 입력하지 않아도 된다.</p>
-<ul>
-<li>함수를 파일명 없이 바로 사용하고 싶다면, ‘from 모듈이름 import 모듈함수, 모듈함수, …’ 와 같이 사용할수 있다.</li>
-<li>‘from 모듈이름 import *’ 은 ‘모듈이름’ 에 포함된 모든 함수를 사용한다는 뜻</li>
-</ul>
-</li>
-<li><pre><code class="python"><span class="comment"># __name__ 변수는 파이썬이 내부적으로 사용하는 변수 이름이다. '특정.py'을 직접 실행할 경우, 해당 특정.py 내부의 __name__ 변수에는 __main__ 값이 저장된다. 하지만 파이썬 셸이나 다른 파이썬 모듈에서 import 특정 일경우, __name__ 안에는 __특정__ 이 저장되어 있다.</span>
-<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
-    <span class="keyword">print</span> (<span class="string">"Hello"</span>)
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 모듈이 있는 디렉토리로 이동하지 않고 아래의 방법을 사용하여 어디서든 모듈을 불러와 사용할두 있다.</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    $ python</span><br><span class="line">    >>> import sys</span><br><span class="line">    >>> sys.path</span><br><span class="line">    >>> sys.path.append("/User/crayon/..")</span><br><span class="line">    </span><br><span class="line">    # 혹은</span><br><span class="line">    </span><br><span class="line">    $ set PYTHONPATH=/User/crayon</span><br><span class="line">    $ python </span><br><span class="line">    >>> import someParent</span><br><span class="line">    >>> ~~</span><br></pre></td></tr></tbody></table></figure>
-</code></pre>
-</li>
-</ul>
-<h3 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h3><ul>
-<li><p>dot(.) 를 사용하여 파이썬 모듈을 계층적(디렉토리 구조)으로 관리할수 있게 해준다.</p>
-</li>
-<li><p>파이썬 패키지는 디렉토리와 파이썬 모듈로 이뤄져 있다.</p>
-</li>
-<li><pre><code class="python"><span class="comment"># 패키지 않의 함수 실행 방법</span>
-<span class="comment"># 1.</span>
-<span class="meta">>>> </span><span class="keyword">import</span> game.sound.echo
-<span class="meta">>>> </span>game.sound.echo.echo_test()
-<span class="comment"># 2.</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> echo
-<span class="meta">>>> </span>echo.echo_test()
-<span class="comment"># 3.</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound.echo <span class="keyword">import</span> echo_test
-<span class="meta">>>> </span>echo_test()
-<span class="comment"># 4. 아래와 같이 사용하려면, 특정 위치의 __init__.py에 아래와 같이 선언되어야 한다.</span>
-<span class="comment"># /User/crayon/game/sound/__init__.py</span>
-<span class="comment"># __all__ = ['echo']</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> *
-<span class="meta">>>> </span>echo.echo_test()
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- relative 패키지</span><br><span class="line"></span><br><span class="line">  - . 혹은 .. 으로 선언하는거 같다.</span><br><span class="line"></span><br><span class="line">### PyPI</span><br><span class="line"></span><br><span class="line">- Python Package Index의 줄임말로 파이썬 패키지 저장소</span><br><span class="line"></span><br><span class="line">### pip, pip3</span><br><span class="line"></span><br><span class="line">- Python package management system. 파이썬으로 작성된 패키지 라이브러리를 관리해 주는 시스템</span><br><span class="line"></span><br><span class="line">- python 3.4 이후에는 기본적으로 포함되어 있음</span><br><span class="line"></span><br><span class="line">- pip list 를 통해 현재 local에 설치된 파이썬 패키지 목록을 확인할수 있음</span><br><span class="line"></span><br><span class="line">- 아래를 통해 pip 를 업데이트 할수 있다.</span><br><span class="line"></span><br><span class="line">- ```bash</span><br><span class="line">  # pip update 하기</span><br><span class="line">  $ pip install --upgrade pip	</span><br><span class="line">  # python 패키지 설치하기</span><br><span class="line">  $ pip install numpy</span><br><span class="line">  # 특정버전 설치</span><br><span class="line">  $ pip install numpy == 1.0.0</span><br><span class="line">  # 패키지 버전 업그레이드</span><br><span class="line">  $ pip install --upgrade numpy</span><br><span class="line">  # python 패키지 제거하기</span><br><span class="line">  $ pip uninstall numpy</span><br></pre></td></tr></tbody></table></figure>
-</code></pre>
-</li>
-</ul>
-<h3 id="Virtaul-env"><a href="#Virtaul-env" class="headerlink" title="Virtaul env"></a>Virtaul env</h3><ul>
-<li>virtualenv is a tool to create isolated Python environments.</li>
-</ul>
-<p>pyenv, pyenv-virtualenv setting</p>
-<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ brew install pyenv</span><br><span class="line">$ brew install pyenv-virtualenv</span><br><span class="line">$ brew install readline xz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">################################## write one .zshrc ##################################</span></span><br><span class="line"><span class="hljs-built_in">export</span> PYENV_ROOT=<span class="hljs-variable">$HOME</span>/.pyenv</span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv-virtualenv-init > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv virtualenv-init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-comment">######################################################################################</span></span><br><span class="line"></span><br><span class="line">$ pyenv install --list</span><br><span class="line">$ pyenv install 3.7.4</span><br><span class="line">$ pyenv uninstall 3.7.4</span><br><span class="line">$ pyenv global 3.7.4</span><br><span class="line">$ pyenv versions</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pyenv <span class="hljs-built_in">which</span> python</span><br><span class="line"></span><br><span class="line">$ pyenv virtualenv 3.7.4 sample-env</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## Apply env on directory</span></span><br><span class="line">$ <span class="hljs-built_in">cd</span> some_dicrector</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span> sample-env</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pip list</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-
-
-
-
-<p>참고</p>
-<ul>
-<li><a href="https://book.coalastudy.com/python-basic/" target="_blank" rel="external nofollow noopener noreferrer">https://book.coalastudy.com/python-basic/</a></li>
-<li><a href="https://wikidocs.net/29" target="_blank" rel="external nofollow noopener noreferrer">https://wikidocs.net/29</a></li>
-</ul>
-</body></html>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 200 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/11/java/">future &amp; java</a>
-            
-        </h1>
-        <div class="content">
-            <html><head></head><body><h1 id="Future-vs-CompleteableFuture"><a href="#Future-vs-CompleteableFuture" class="headerlink" title="Future vs CompleteableFuture"></a>Future vs CompleteableFuture</h1><h2 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h2><ul>
-<li>java7 에서 제공하는 인터페이스</li>
-<li>비동기 프로세스 수행할수 있게 해줌</li>
-<li>비동기 프로세스 종료확인하는 isDone(), 타임아웃 제공하고 결과 출력하는 get() 메소드 제공</li>
-<li>간단하기는 하나 제공되는 기능이 별로 없음</li>
-</ul>
-<h2 id="CompeteableFuture"><a href="#CompeteableFuture" class="headerlink" title="CompeteableFuture"></a>CompeteableFuture</h2><ul>
-<li>java8 에서 제공하는 클래스</li>
-<li>Future 구현?! 클래스 간에 여러 의존성에 대한 관리를 쉽게 할수 있음</li>
-<li>Stream API 나 Optional 와 같은 람다 표현식과 파이프라인을 사용하여 비동기 작업을 조합할수 있다.</li>
-</ul>
-<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
-<li><a href="https://doohyun.tistory.com/52" target="_blank" rel="external nofollow noopener noreferrer">https://doohyun.tistory.com/52</a></li>
-<li>[아직안봄] <a href="https://medium.com/@chanhyeonglee/completable-future-가이드-파트2-eb82768f095d" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@chanhyeonglee/completable-future-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%8C%8C%ED%8A%B82-eb82768f095d</a></li>
 </ul>
 </body></html>
         </div>
@@ -1374,6 +1357,171 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2020/09/02/bookreview-object-01/" class="image is-7by1">
+            <img class="thumbnail" src="/images/wang_tta_na_mu.png" alt="BookReview 오브젝트 01">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-09-02T08:02:00.000Z">2020-09-02</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 516 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/09/02/bookreview-object-01/">BookReview 오브젝트 01</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><h2 id="객체-지향-설계란"><a href="#객체-지향-설계란" class="headerlink" title="객체(지향), 설계란"></a>객체(지향), 설계란</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
+<li><strong>자율적인 객체</strong>들이 오직 <strong>메시지</strong>만을 통해 <strong>협력</strong>하여 요구사항을 해결하도록 설계하는것</li>
+</ul>
+<h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><ul>
+<li><strong>요구사항 변경에 용이</strong>하고, <strong>코드 파악도 쉬워</strong>진다. </li>
+</ul>
+<h3 id="How"><a href="#How" class="headerlink" title="How"></a>How</h3><ul>
+<li><h6 id="자율적인-객체-만들기"><a href="#자율적인-객체-만들기" class="headerlink" title="자율적인 객체 만들기"></a>자율적인 객체 만들기</h6><ul>
+<li>캡슐화 적용<ul>
+<li>메시지 만으로 객체와 상호작용</li>
+<li>객체 내부의 상태를 캡슐화, 객체간에 오직 메시지를 통해서만 상호작용하도록 만드는것</li>
+<li>불필요한 의존성을 제거함으로써, 결합도(coupling) 낮추기</li>
+</ul>
+</li>
+<li>책임의 이동<ul>
+<li>절차지향과는 다른 객체지향의 특징중 하나.</li>
+<li>연관된 상태(데이터) 혹은 행동(메소드)를 가지고 있는 객체에게 위임.<ul>
+<li>응집도가 높아짐</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>의인화 적용<ul>
+<li>능동적인(자율적인) 객체가 될수 있음 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="메시지만을-통한-객체간에-협력적인-관계-만들기"><a href="#메시지만을-통한-객체간에-협력적인-관계-만들기" class="headerlink" title="메시지만을 통한 객체간에 협력적인 관계 만들기"></a>메시지만을 통한 객체간에 협력적인 관계 만들기</h6><ul>
+<li>메시지(인터페이스)로 상호작용 (모든 객체는 캡슐화 되어있다)</li>
+<li>상대 객체의 상태 혹은 행동으로 대화하지 않고, 필요한 부분을 위임하고, 결과만 받기</li>
+</ul>
+</li>
+</ul>
+<h3 id="What"><a href="#What" class="headerlink" title="What"></a>What</h3><ul>
+<li>적절한 책임을 가지고 있는 각각의 자율적인 객체들은, 협력하는 객체들과 의존성(결합도)이 낮다.<ul>
+<li>이는 요구사항 변경에 용이하다.</li>
+</ul>
+</li>
+<li>이러한 책임을 가지는 객체들이 메시지로만 상호작용한다면, 추상화 하기 편하다.<ul>
+<li>추상화된 코드는 이해하기 편하다. (vs getter, setter)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h3><h6 id="결합도-Coupling-응집도-Cohesion-관련"><a href="#결합도-Coupling-응집도-Cohesion-관련" class="headerlink" title="결합도(Coupling), 응집도(Cohesion) 관련"></a>결합도(Coupling), 응집도(Cohesion) 관련</h6><ul>
+<li>Getter, Setter 사용<ul>
+<li>Getter, Setter 는 메시지가 아니다. (개인적인 생각..)</li>
+<li>Getter, Setter 를 사용하면 결합도가 높아진다.</li>
+<li>Getter, Setter 를 사용하면 응집도가 낮아진다.</li>
+<li>객체 내부의 여러 상태를 바꾸는 혹은 생성후 설정하는 것을 여러 setter로 하는것과 context 를 넘겨 자율적으로 설정하는 것</li>
+</ul>
+</li>
+</ul>
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-08-29T21:47:00.000Z">2020-08-30</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 197 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/08/30/bookreview-object-introduction/">Book review 오브젝트intro</a>
+            
+        </h1>
+        <div class="content">
+            <html><head></head><body><p>서문</p>
+<p>목차</p>
+<p>1장 ‘객체, 설계’</p>
+<p>2장 ‘객체지향 프로그래밍’</p>
+<p>3장 ‘역할, 책임, 협력’</p>
+<p>4장 ‘설계 품질과 트레이드오프’</p>
+<p>5장 ‘책임 할당하기’</p>
+<p>6장 ‘메시지와 인터페이스’</p>
+<p>7장 ‘객체 분해’</p>
+<p>8장 ‘의존성 관리하기’</p>
+<p>9장 ‘유연한 설계’</p>
+<p>10장 ‘상속과 코드 재사용’</p>
+<p>11장 ‘합성과 유연한 설계’</p>
+<p>12장 ‘다형성’</p>
+<p>13장 ‘서브클래싱과 서브타이핑’</p>
+<p>14장 ‘일관성 있는 협력’</p>
+<p>15장 ‘디자인 패턴과 프레임워크’</p>
+<p>부록 A ‘계약에 의한 설계’</p>
+<p>부록 B ‘타입 계층의 구현’</p>
+<p>부록 C ‘동적인 협력, 정작인 코드’</p>
+<p>부록 D ‘참고문헌’</p>
+<h1 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h1><h1 id="H1-Hello-World"><a href="#H1-Hello-World" class="headerlink" title="H1 : Hello World"></a>H1 : Hello World</h1><h2 id="H2-Hello-World"><a href="#H2-Hello-World" class="headerlink" title="H2 : Hello World"></a>H2 : Hello World</h2><h3 id="H3-Hello-world"><a href="#H3-Hello-world" class="headerlink" title="H3 : Hello world"></a>H3 : Hello world</h3><h4 id="H4-Hello-world"><a href="#H4-Hello-world" class="headerlink" title="H4 : Hello world"></a>H4 : Hello world</h4><h5 id="H5-Hello-world"><a href="#H5-Hello-world" class="headerlink" title="H5 : Hello world"></a>H5 : Hello world</h5><h6 id="H6-Hello-world"><a href="#H6-Hello-world" class="headerlink" title="H6 : Hello world"></a>H6 : Hello world</h6><p>H7 : Hello world</p>
+<figure class="highlight java hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String helloWorld = <span class="hljs-string">"Hello World!"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2019/12/16/aws-training/" class="image is-7by1">
             <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
         </a>
@@ -2160,7 +2308,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1359 words)
+                    10 minutes read (About 1520 words)
                 </span>
                 
                 
@@ -2223,6 +2371,18 @@
 </ul>
 </li>
 </ul>
+<h2 id="Terms"><a href="#Terms" class="headerlink" title="Terms"></a>Terms</h2><ul>
+<li>Volume<ul>
+<li>container 변경사항을 UnionFS 를 통해 관리</li>
+<li>UnionFS 는 image layer 와 write layer(휘발성) 둘다관리</li>
+<li>목적 : write layer 데이터를 그나마. <strong>비휘발성인 host 저장</strong>하거나, <strong>컨테이너 사이 데이터 공유</strong></li>
+<li>host 와 container 가 동기화 됨으로, 양방향 으로 모든 액션(생성,수정,삭제)가 동기화됨</li>
+<li>$ docker run -it -v (호스트 디렉토리):(컨테이너의 volume 디렉토리) (이미지) /bin/bash</li>
+<li>다양한 응용의 고찰 : <a href="https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html" target="_blank" rel="external nofollow noopener noreferrer">https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html</a></li>
+<li></li>
+</ul>
+</li>
+</ul>
 <h1 id="Client-Images-Containers"><a href="#Client-Images-Containers" class="headerlink" title="Client, Images, Containers"></a>Client, Images, Containers</h1><h2 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h2><ul>
 <li>컨테이너는 호스트 시스템의 커널을 공유하며 (선택에 의해) 다른 컨테이너로부터 독립적이고 완비된 실행환경<ul>
 <li>전체 OS 환경이 필요하지 않음</li>
@@ -2231,7 +2391,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{tagname1}}/{{tabname2}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Command-Tools"><a href="#Command-Tools" class="headerlink" title="Command Tools"></a>Command Tools</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">$ docker info</span><br><span class="line">$ docker images</span><br><span class="line">$ docker inspect {{containerId|containerName}}</span><br><span class="line">$ docker -it {{containerId|containerName}}</span><br><span class="line">$ docker system prune <span class="hljs-comment"># docker stop된 컨테이너 모두 삭제 delete</span></span><br><span class="line"><span class="hljs-comment"># $ nsenter</span></span><br><span class="line">$ docker volume ls</span><br><span class="line">$ docker volume inspect {{volumeId}}</span><br><span class="line">$ docker volume prune <span class="hljs-comment"># docker volume 모두 삭제(delete all)</span></span><br><span class="line"><span class="hljs-comment"># 컨테이너 접근 어려울때 아래로 확인 가능하다.</span></span><br><span class="line">$ sudo ls -al /var/lib/docker/containers/{{containerFullId}}</span><br><span class="line">$ docker logs {{containerId|containerName}}  <span class="hljs-comment"># docker logs -f {{containerId}}</span></span><br><span class="line">$ docker stats {{containerId}} <span class="hljs-comment"># docker stats</span></span><br><span class="line"><span class="hljs-comment"># 인증 먼저 해야함..</span></span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats</span><br><span class="line">$ curl -s http://localhost:2375/v1/containers/{{containerId}}/stats | head -1 | python -m json.tool</span><br><span class="line">$ docker events <span class="hljs-comment"># --since 혹은 --until 옵션으로 추가 제어 가능</span></span><br><span class="line"><span class="hljs-comment">#### cAdvisor 라고, 구글 사내에서 쓰는 그래프용 모니터링 툴을 docker로 띄울수도 있다. 참고</span></span><br><span class="line">$ docker top {{containerId}}</span><br><span class="line">$ docker <span class="hljs-built_in">history</span> {{imageId}}</span><br><span class="line">$ sudo docker diff {{containerId}}</span><br><span class="line"><span class="hljs-comment"># 도커컨테이너 내부로 들어가기</span></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it {{container_id | container_name}} /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 도커 실행 관련</span></span><br><span class="line"><span class="hljs-comment"># docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARGS...]</span></span><br><span class="line"><span class="hljs-comment"># 우분투 실행</span></span><br><span class="line"><span class="hljs-comment"># -t 혹은 (--tag) </span></span><br><span class="line">$ docker run -d -t ubuntu /bin/bash</span><br><span class="line">$ docker build -t {{name}}:{{version}} .</span><br><span class="line">$ docker login && docker push {{tagName1}}/{{tabName2}}</span><br><span class="line">$ docker rm {{containerId}}</span><br><span class="line">$ docker rmi {{imageId}},{{imageId}}, ...</span><br><span class="line"><span class="hljs-comment"># 도커 이미지 다운로드</span></span><br><span class="line"><span class="hljs-comment"># docker pull [OPTIONS] NAME[:TAG|@DIGEST]</span></span><br><span class="line"><span class="hljs-comment"># tag 지정하지 않으면 최신버전으로 다운로드</span></span><br><span class="line">$ docker pull mysql</span><br><span class="line"><span class="hljs-comment"># 레디스 실행</span></span><br><span class="line"><span class="hljs-comment"># -d (백그라운드로), -p (로컬포트 4321를 도커 컨테이너 6379에 연결)</span></span><br><span class="line">$ docker run -d -p 4321:6379 redis</span><br><span class="line"><span class="hljs-comment"># 도커 컨테이너 중지</span></span><br><span class="line">$ docker stop {{docker_container_id}}</span><br><span class="line"><span class="hljs-comment"># 중지된 컨테이너 일괄삭제</span></span><br><span class="line">$ docker rm -v $(docker ps -a -q -f status=exited)</span><br><span class="line"><span class="hljs-comment"># 컨테이너 볼륨 마운트</span></span><br><span class="line">$ docker run -d -p 3306:3306 \</span><br><span class="line">	-e MYSQL_ALLOW_EMPTY_PASSWORD=<span class="hljs-literal">true</span> \</span><br><span class="line">	--name mysql</span><br><span class="line">	-v /my/own/dir:/var/lib/mysql</span><br><span class="line">	mysql:5.7</span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="Productionize-Debuging-flow"><a href="#Productionize-Debuging-flow" class="headerlink" title="Productionize, Debuging flow"></a>Productionize, Debuging flow</h1><h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
 <li>오케스트레이션</li>
@@ -2377,200 +2537,6 @@
 <li><a href="https://medium.com/@umanking/카프카에-대해서-이야기-하기전에-먼저-data에-대해서-이야기해보자-d2e3ca2f3c2" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@umanking/%EC%B9%B4%ED%94%84%EC%B9%B4%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-%ED%95%98%EA%B8%B0%EC%A0%84%EC%97%90-%EB%A8%BC%EC%A0%80-data%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EB%B3%B4%EC%9E%90-d2e3ca2f3c2</a></li>
 <li><a href="https://www.popit.kr/kafka-운영자가-말하는-처음-접하는-kafka/" target="_blank" rel="external nofollow noopener noreferrer">https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka/</a></li>
 <li><a href="https://coding-start.tistory.com/133" target="_blank" rel="external nofollow noopener noreferrer">https://coding-start.tistory.com/133</a></li>
-</ul>
-</body></html>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7 minutes read (About 1024 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/11/python-infra/">Python&#39;s infra</a>
-            
-        </h1>
-        <div class="content">
-            <html><head></head><body><h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><ul>
-<li><p>인스턴스라는 말은 특정 객체 (a)가 어떤 클래스(A) 의 객체인지를 관계 위주로 설명할때 사용</p>
-<ul>
-<li>‘a는 인스턴스’ 모다는 ‘a는 객체’라는 표현이 어울리며, ‘a 는 A의 객체’ 보다는 ‘a는 A의 인스턴스’라는 표현이 어울린다.</li>
-<li>type(a) 는 a객체가 어떤 타입인지 return 한다.</li>
-<li>id(a) 는 a객체의 주소를 return 한다.</li>
-</ul>
-</li>
-<li><p>pass 는 아무것도 사용하지 않는 문법으로, 임시로 코드를 작성할때 주로 사용된다.</p>
-</li>
-<li><p>Constructor & Method</p>
-<ul>
-<li><p>아래와 같이 선언</p>
-<figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SomeParent</span>:</span></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">    self.first = first</span><br><span class="line">    self.second = second</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setData</span><span class="hljs-params">(self, first, second)</span>:</span></span><br><span class="line">		self.first = first</span><br><span class="line">		self.second = second</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>파이썬에서는 메서드의 첫번째 매개변수로 ‘self’를 사용한다. 객체를 호출할때 호출객체 자신이 전달되기 때문이다.</p>
-</li>
-</ul>
-</li>
-<li><p>Inheritance </p>
-<ul>
-<li><pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">SomeChild</span><span class="params">(SomeParent)</span>:</span>
-  classVariable = <span class="string">"hello"</span>
-  <span class="function"><span class="keyword">def</span> <span class="title">pow</span><span class="params">(self)</span>:</span>
-    <span class="keyword">return</span> self.first ** self.second
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - Method overriding 도 가능하다.</span><br><span class="line"></span><br><span class="line">  - classVariable 의 경우 클래스 변수이다.</span><br><span class="line"></span><br><span class="line">- Lambda</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    >>> add = lambda a,b: a+b</span><br><span class="line">    >>> result = add(3,4)</span><br><span class="line">    >>> print(result)</span><br></pre></td></tr></tbody></table></figure></code></pre>
-</li>
-<li><p>위와 같이 람다를 사용할수 있다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><ul>
-<li><p>Library.</p>
-</li>
-<li><p>함수나 변수 또는 클래스를 모아놓은 파일.</p>
-</li>
-<li><p>사용용도를 기준으로 파일을 나누어, 필요할때 해당 코드를 Import 하여 사용하기 위한 기준? 단위</p>
-</li>
-<li><p>포함하려는 파일이 같은 디렉토리에 있어야 한다.</p>
-</li>
-<li><p>import ‘moduleName’ 으로 사용한다. ‘.py’는 입력하지 않아도 된다.</p>
-<ul>
-<li>함수를 파일명 없이 바로 사용하고 싶다면, ‘from 모듈이름 import 모듈함수, 모듈함수, …’ 와 같이 사용할수 있다.</li>
-<li>‘from 모듈이름 import *’ 은 ‘모듈이름’ 에 포함된 모든 함수를 사용한다는 뜻</li>
-</ul>
-</li>
-<li><pre><code class="python"><span class="comment"># __name__ 변수는 파이썬이 내부적으로 사용하는 변수 이름이다. '특정.py'을 직접 실행할 경우, 해당 특정.py 내부의 __name__ 변수에는 __main__ 값이 저장된다. 하지만 파이썬 셸이나 다른 파이썬 모듈에서 import 특정 일경우, __name__ 안에는 __특정__ 이 저장되어 있다.</span>
-<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
-    <span class="keyword">print</span> (<span class="string">"Hello"</span>)
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 모듈이 있는 디렉토리로 이동하지 않고 아래의 방법을 사용하여 어디서든 모듈을 불러와 사용할두 있다.</span><br><span class="line"></span><br><span class="line">  - ```python</span><br><span class="line">    $ python</span><br><span class="line">    >>> import sys</span><br><span class="line">    >>> sys.path</span><br><span class="line">    >>> sys.path.append("/User/crayon/..")</span><br><span class="line">    </span><br><span class="line">    # 혹은</span><br><span class="line">    </span><br><span class="line">    $ set PYTHONPATH=/User/crayon</span><br><span class="line">    $ python </span><br><span class="line">    >>> import someParent</span><br><span class="line">    >>> ~~</span><br></pre></td></tr></tbody></table></figure>
-</code></pre>
-</li>
-</ul>
-<h3 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h3><ul>
-<li><p>dot(.) 를 사용하여 파이썬 모듈을 계층적(디렉토리 구조)으로 관리할수 있게 해준다.</p>
-</li>
-<li><p>파이썬 패키지는 디렉토리와 파이썬 모듈로 이뤄져 있다.</p>
-</li>
-<li><pre><code class="python"><span class="comment"># 패키지 않의 함수 실행 방법</span>
-<span class="comment"># 1.</span>
-<span class="meta">>>> </span><span class="keyword">import</span> game.sound.echo
-<span class="meta">>>> </span>game.sound.echo.echo_test()
-<span class="comment"># 2.</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> echo
-<span class="meta">>>> </span>echo.echo_test()
-<span class="comment"># 3.</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound.echo <span class="keyword">import</span> echo_test
-<span class="meta">>>> </span>echo_test()
-<span class="comment"># 4. 아래와 같이 사용하려면, 특정 위치의 __init__.py에 아래와 같이 선언되어야 한다.</span>
-<span class="comment"># /User/crayon/game/sound/__init__.py</span>
-<span class="comment"># __all__ = ['echo']</span>
-<span class="meta">>>> </span><span class="keyword">from</span> game.sound <span class="keyword">import</span> *
-<span class="meta">>>> </span>echo.echo_test()
-<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- relative 패키지</span><br><span class="line"></span><br><span class="line">  - . 혹은 .. 으로 선언하는거 같다.</span><br><span class="line"></span><br><span class="line">### PyPI</span><br><span class="line"></span><br><span class="line">- Python Package Index의 줄임말로 파이썬 패키지 저장소</span><br><span class="line"></span><br><span class="line">### pip, pip3</span><br><span class="line"></span><br><span class="line">- Python package management system. 파이썬으로 작성된 패키지 라이브러리를 관리해 주는 시스템</span><br><span class="line"></span><br><span class="line">- python 3.4 이후에는 기본적으로 포함되어 있음</span><br><span class="line"></span><br><span class="line">- pip list 를 통해 현재 local에 설치된 파이썬 패키지 목록을 확인할수 있음</span><br><span class="line"></span><br><span class="line">- 아래를 통해 pip 를 업데이트 할수 있다.</span><br><span class="line"></span><br><span class="line">- ```bash</span><br><span class="line">  # pip update 하기</span><br><span class="line">  $ pip install --upgrade pip	</span><br><span class="line">  # python 패키지 설치하기</span><br><span class="line">  $ pip install numpy</span><br><span class="line">  # 특정버전 설치</span><br><span class="line">  $ pip install numpy == 1.0.0</span><br><span class="line">  # 패키지 버전 업그레이드</span><br><span class="line">  $ pip install --upgrade numpy</span><br><span class="line">  # python 패키지 제거하기</span><br><span class="line">  $ pip uninstall numpy</span><br></pre></td></tr></tbody></table></figure>
-</code></pre>
-</li>
-</ul>
-<h3 id="Virtaul-env"><a href="#Virtaul-env" class="headerlink" title="Virtaul env"></a>Virtaul env</h3><ul>
-<li>virtualenv is a tool to create isolated Python environments.</li>
-</ul>
-<p>pyenv, pyenv-virtualenv setting</p>
-<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ brew install pyenv</span><br><span class="line">$ brew install pyenv-virtualenv</span><br><span class="line">$ brew install readline xz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">################################## write one .zshrc ##################################</span></span><br><span class="line"><span class="hljs-built_in">export</span> PYENV_ROOT=<span class="hljs-variable">$HOME</span>/.pyenv</span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> pyenv-virtualenv-init > /dev/null; <span class="hljs-keyword">then</span> <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv virtualenv-init -)</span>"</span>; <span class="hljs-keyword">fi</span></span><br><span class="line"><span class="hljs-comment">######################################################################################</span></span><br><span class="line"></span><br><span class="line">$ pyenv install --list</span><br><span class="line">$ pyenv install 3.7.4</span><br><span class="line">$ pyenv uninstall 3.7.4</span><br><span class="line">$ pyenv global 3.7.4</span><br><span class="line">$ pyenv versions</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pyenv <span class="hljs-built_in">which</span> python</span><br><span class="line"></span><br><span class="line">$ pyenv virtualenv 3.7.4 sample-env</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## Apply env on directory</span></span><br><span class="line">$ <span class="hljs-built_in">cd</span> some_dicrector</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span> sample-env</span><br><span class="line">$ pyenv <span class="hljs-built_in">local</span></span><br><span class="line">$ pip list</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-
-
-
-
-<p>참고</p>
-<ul>
-<li><a href="https://book.coalastudy.com/python-basic/" target="_blank" rel="external nofollow noopener noreferrer">https://book.coalastudy.com/python-basic/</a></li>
-<li><a href="https://wikidocs.net/29" target="_blank" rel="external nofollow noopener noreferrer">https://wikidocs.net/29</a></li>
-</ul>
-</body></html>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-10T15:00:00.000Z">2019-07-11</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 200 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/11/java/">future &amp; java</a>
-            
-        </h1>
-        <div class="content">
-            <html><head></head><body><h1 id="Future-vs-CompleteableFuture"><a href="#Future-vs-CompleteableFuture" class="headerlink" title="Future vs CompleteableFuture"></a>Future vs CompleteableFuture</h1><h2 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h2><ul>
-<li>java7 에서 제공하는 인터페이스</li>
-<li>비동기 프로세스 수행할수 있게 해줌</li>
-<li>비동기 프로세스 종료확인하는 isDone(), 타임아웃 제공하고 결과 출력하는 get() 메소드 제공</li>
-<li>간단하기는 하나 제공되는 기능이 별로 없음</li>
-</ul>
-<h2 id="CompeteableFuture"><a href="#CompeteableFuture" class="headerlink" title="CompeteableFuture"></a>CompeteableFuture</h2><ul>
-<li>java8 에서 제공하는 클래스</li>
-<li>Future 구현?! 클래스 간에 여러 의존성에 대한 관리를 쉽게 할수 있음</li>
-<li>Stream API 나 Optional 와 같은 람다 표현식과 파이프라인을 사용하여 비동기 작업을 조합할수 있다.</li>
-</ul>
-<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
-<li><a href="https://doohyun.tistory.com/52" target="_blank" rel="external nofollow noopener noreferrer">https://doohyun.tistory.com/52</a></li>
-<li>[아직안봄] <a href="https://medium.com/@chanhyeonglee/completable-future-가이드-파트2-eb82768f095d" target="_blank" rel="external nofollow noopener noreferrer">https://medium.com/@chanhyeonglee/completable-future-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%8C%8C%ED%8A%B82-eb82768f095d</a></li>
 </ul>
 </body></html>
         </div>
@@ -2653,7 +2619,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            17
+                            19
                         </p>
                     </a>
                 </div>
@@ -2677,7 +2643,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            29
+                            32
                         </p>
                     </a>
                 </div>
@@ -2790,6 +2756,44 @@
         
         <article class="media">
             
+            <a href="/2020/09/02/bookreview-object-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/wang_tta_na_mu.png" alt="BookReview 오브젝트 01">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-02T08:02:00.000Z">2020-09-02</time></div>
+                    <a href="/2020/09/02/bookreview-object-01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">BookReview 오브젝트 01</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/08/30/bookreview-object-introduction/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Book review 오브젝트intro">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-29T21:47:00.000Z">2020-08-30</time></div>
+                    <a href="/2020/08/30/bookreview-object-introduction/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Book review 오브젝트intro</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/16/aws-training/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/aws_logo.jpg" alt="AWS training">
@@ -2845,44 +2849,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/28/ML/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ML : Machine Learning">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/ML/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ML : Machine Learning</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/ML/">ML</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/28/setting_oracle/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Setting Oracle using docker">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-28T02:47:00.000Z">2019-11-28</time></div>
-                    <a href="/2019/11/28/setting_oracle/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Setting Oracle using docker</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/db/">db</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -2927,7 +2893,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
+        <a href="/tags/BookReview/" style="font-size: 20px;">BookReview</a> <a href="/tags/OOP/" style="font-size: 20px;">OOP</a> <a href="/tags/Object/" style="font-size: 20px;">Object</a> <a href="/tags/airflow/" style="font-size: 10px;">airflow</a> <a href="/tags/akka/" style="font-size: 10px;">akka</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/aws/" style="font-size: 20px;">aws</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/clustering/" style="font-size: 10px;">clustering</a> <a href="/tags/designpattern/" style="font-size: 10px;">designpattern</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/factory/" style="font-size: 10px;">factory</a> <a href="/tags/functionalprogramming/" style="font-size: 10px;">functionalprogramming</a> <a href="/tags/future/" style="font-size: 10px;">future</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/infra/" style="font-size: 10px;">infra</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java8/" style="font-size: 20px;">java8</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/ml/" style="font-size: 10px;">ml</a> <a href="/tags/oop/" style="font-size: 10px;">oop</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springframework/" style="font-size: 10px;">springframework</a> <a href="/tags/traning/" style="font-size: 10px;">traning</a> <a href="/tags/xray/" style="font-size: 10px;">xray</a> <a href="/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" style="font-size: 10px;">객체지향</a>
     </div>
 </div>
         
@@ -2938,6 +2904,28 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
@@ -3039,6 +3027,27 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BookReview/">
+                        <span class="tag">BookReview</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/OOP/">
+                        <span class="tag">OOP</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Object/">
+                        <span class="tag">Object</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/airflow/">
