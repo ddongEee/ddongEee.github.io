@@ -4,22 +4,17 @@
 
     <sitemap>
         <loc>http://ddongeee.github.io/post-sitemap.xml</loc>
-        <lastmod>2020-09-02T17:20:27.244Z</lastmod>
+        <lastmod>2021-05-12T00:52:26.423Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://ddongeee.github.io/page-sitemap.xml</loc>
-        <lastmod>2020-06-06T08:36:33.204Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>http://ddongeee.github.io/category-sitemap.xml</loc>
-        <lastmod>2020-06-06T08:36:33.197Z</lastmod>
+        <lastmod>2021-05-12T00:52:26.449Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://ddongeee.github.io/tag-sitemap.xml</loc>
-        <lastmod>2020-09-02T17:20:27.244Z</lastmod>
+        <lastmod>2021-05-12T00:52:26.423Z</lastmod>
     </sitemap>
 
 </sitemapindex>
