@@ -9,8 +9,29 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 30 Dec 2021 06:16:57 GMT</pubDate>
+    <pubDate>Fri, 31 Dec 2021 05:27:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hello world crayon</title>
+      <link>http://ddongeee.github.io/2021/12/30/hello-world-crayon/</link>
+      <guid>http://ddongeee.github.io/2021/12/30/hello-world-crayon/</guid>
+      <pubDate>Thu, 30 Dec 2021 07:36:57 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Tips&quot;&gt;&lt;a href=&quot;#Tips&quot; class=&quot;headerlink&quot; title=&quot;Tips&quot;&gt;&lt;/a&gt;Tips&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;{terminal}[myenv:config]Open as
+        
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<html><head></head><body><h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ul><li>{terminal}[myenv:config]Open as sublimetext : subl</li><li>{terminal} 명령어 위치 탐색 : type -a subl</li><li>{iterm2} cmd + ]</li></ul></body></html>]]></content:encoded>
+      
+      <comments>http://ddongeee.github.io/2021/12/30/hello-world-crayon/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Enhanced factory pattern with spring framework</title>

@@ -201,7 +201,7 @@ img.thumbnail {
   margin-bottom: 0.5rem !important;
 }
 .article .content {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .article .content blockquote.pullquote {
   float: right;
@@ -366,13 +366,16 @@ img.thumbnail {
 /* ---------------------------------
  *        Fix content elements
  * --------------------------------- */
+.card .article .title {
+  font-size: 3.25em !important;
+}
 .content h1,
 .content h2,
 .content h3,
 .content h4,
 .content h5,
 .content h6 {
-  font-weight: 400;
+  font-weight: 900;
 }
 .content h1 {
   font-size: 1.75em;
