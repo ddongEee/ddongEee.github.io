@@ -9,28 +9,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 03 Jan 2022 01:53:06 GMT</pubDate>
+    <pubDate>Tue, 04 Jan 2022 06:02:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>hello world crayon</title>
-      <link>http://ddongeee.github.io/2021/12/30/hello-world-crayon/</link>
-      <guid>http://ddongeee.github.io/2021/12/30/hello-world-crayon/</guid>
-      <pubDate>Thu, 30 Dec 2021 07:36:57 GMT</pubDate>
+      <title>Jambda = Java + Lambda</title>
+      <link>http://ddongeee.github.io/2022/01/03/jambda/</link>
+      <guid>http://ddongeee.github.io/2022/01/03/jambda/</guid>
+      <pubDate>Mon, 03 Jan 2022 02:27:22 GMT</pubDate>
       <description>
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Tips&quot;&gt;&lt;a href=&quot;#Tips&quot; class=&quot;headerlink&quot; title=&quot;Tips&quot;&gt;&lt;/a&gt;Tips&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;{terminal}[myenv:config]Open as
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;목적&quot;&gt;&lt;a href=&quot;#목적&quot; class=&quot;headerlink&quot; title=&quot;목적&quot;&gt;&lt;/a&gt;목적&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;가장 빠르게 반복적으로 람다를 개발하고 클라우드 환경에서 실행할수 있는
         
       
       </description>
       
       
-      <content:encoded><![CDATA[<html><head></head><body><h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ul><li>{terminal}[myenv:config]Open as sublimetext : subl</li><li>{terminal} 명령어 위치 탐색 : type -a subl</li><li>{iterm2} cmd + ]</li></ul><h1 id="This-is-H1"><a href="#This-is-H1" class="headerlink" title="This is H1"></a>This is H1</h1><h2 id="This-is-H2"><a href="#This-is-H2" class="headerlink" title="This is H2"></a>This is H2</h2><h3 id="This-is-H3"><a href="#This-is-H3" class="headerlink" title="This is H3"></a>This is H3</h3><h4 id="This-is-H4"><a href="#This-is-H4" class="headerlink" title="This is H4"></a>This is H4</h4><h5 id="This-is-H5"><a href="#This-is-H5" class="headerlink" title="This is H5"></a>This is H5</h5><h6 id="This-is-H6"><a href="#This-is-H6" class="headerlink" title="This is H6"></a>This is H6</h6><p>####### This is H7</p></body></html>]]></content:encoded>
+      <content:encoded><![CDATA[<html><head></head><body><h1 id="목적"><a href="#목적" class="headerlink" title="목적"></a>목적</h1><ul><li>가장 빠르게 반복적으로 람다를 개발하고 클라우드 환경에서 실행할수 있는 sandbox를 만들고 싶다.</li><li>개발 언어에 대한 허들을 최대한 낮추기 위해 언어는 자바로 하고 싶다.</li><li>의존성관리는 그래들을 사용하여, 쉽게 관리하고 싶다.</li></ul><h1 id="결과물"><a href="#결과물" class="headerlink" title="결과물"></a>결과물</h1><ul><li>Github : <a href="https://github.com/ddongEee/jambda" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/ddongEee/jambda</a></li><li>zip 파일로 동작하는 java11 runtime의 lambda</li><li>1번의 명령어(command)로 build & deploy to lambda 가능한 개발환경</li></ul><h1 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h1><h3 id="개인적으로-생각하는-장점"><a href="#개인적으로-생각하는-장점" class="headerlink" title="개인적으로 생각하는 장점"></a>개인적으로 생각하는 장점</h3><ul><li>웹서비스 프로토타입에 대해서 빠르게 개발 및 배포 & 검증 가능하다.</li><li>Lambda 와 integration 되는 서비스를 빠르게 검증하는 용도로 적합하다.</li><li>당연히 규모가 있고 실제 서비스를 제공하기 위한 프로젝트로는 적합하지 않다.</li></ul><h3 id="람다를-자바로-개발하는것에-대한-의미"><a href="#람다를-자바로-개발하는것에-대한-의미" class="headerlink" title="람다를 자바로 개발하는것에 대한 의미"></a>람다를 자바로 개발하는것에 대한 의미</h3><ul><li>익숙함에 따른 생산성 : (자바를 주 언어로 사용한다면) 언어가 아닌 기술과 활용에 집중 가능해짐. 쉬운 시작.</li><li>마이그레이션 : container base의 spring application 으로 migration 시에 language 변경에 대한 추가 리소스 소비 없음</li></ul></body></html>]]></content:encoded>
       
-      <comments>http://ddongeee.github.io/2021/12/30/hello-world-crayon/#disqus_thread</comments>
+      <comments>http://ddongeee.github.io/2022/01/03/jambda/#disqus_thread</comments>
     </item>
     
     <item>

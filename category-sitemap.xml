@@ -8,19 +8,10 @@
     </url>
 
     <url>
-        <loc>http://ddongeee.github.io/2022/01/03/jambda/</loc>
+        <loc>http://ddongeee.github.io/categories/aws/</loc>
         <lastmod>2022-01-04T06:02:50.467Z</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://ddongeee.github.io/2019/06/06/spring-design-pattern-first/</loc>
-        <lastmod>2022-01-03T01:52:25.546Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
+        <priority>0.2</priority>
     </url>
 
 </urlset>
