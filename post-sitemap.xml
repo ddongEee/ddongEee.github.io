@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://ddongeee.github.io/2022/01/06/custom-impl-for-spring-data-repositories/</loc>
+        <lastmod>2022-01-06T08:15:40.004Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://ddongeee.github.io/2022/01/04/context-based-jmeter-test/</loc>
         <lastmod>2022-01-04T07:25:03.485Z</lastmod>
         <changefreq>weekly</changefreq>
